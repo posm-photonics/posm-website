@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POSM — Quantum Optics Research Group | University of Minnesota</title>
+  <meta name="description"
+    content="POSM is a student-led research group at the University of Minnesota developing experimental hardware for optics, AMO physics, RF control, and quantum technology, advised by Prof. Alexander McLeod." />
+  <meta property="og:title" content="POSM — Quantum Optics & AMO Hardware Research" />
+  <meta property="og:description" content="Student-built hardware for the next generation of quantum science." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="POSM home">
+        <div class="nav-logo-mark" aria-hidden="true">P</div>
+        POSM
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link" data-active="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="team.html" class="nav-link">Team</a>
+        </li>
+        <li class="nav-item">
+          <a href="research.html" class="nav-link">Research</a>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">
+            News
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div class="nav-dropdown" role="menu">
+            <a href="news-updates.html" role="menuitem">Project Updates</a>
+            <a href="news-publications.html" role="menuitem">Publications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">
+            Sponsors
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div class="nav-dropdown" role="menu">
+            <a href="sponsors-current.html" role="menuitem">Current Sponsors</a>
+            <a href="sponsors-join.html" role="menuitem">For Potential Sponsors</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="outreach.html" class="nav-link">Outreach</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="nav-cta">
+        <a href="sponsors-join.html" class="btn btn-primary btn-sm" id="nav-sponsor-btn">Support POSM</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="index.html" class="mobile-menu-link">Home</a>
+    <a href="team.html" class="mobile-menu-link">Team</a>
+    <a href="research.html" class="mobile-menu-link">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div>
+    <a href="news-updates.html" class="mobile-menu-sub">↳ Project Updates</a>
+    <a href="news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div>
+    <a href="sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a>
+    <a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <div class="mobile-menu-divider"></div>
+    <a href="outreach.html" class="mobile-menu-link">Outreach</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+    <div style="margin-top:1.5rem">
+      <a href="sponsors-join.html" class="btn btn-primary w-full" style="justify-content:center">Support POSM</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+    <section id="hero" aria-label="Hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-content">
+        <div class="hero-tag reveal">
+        </div>
+        <h1 class="display-xl hero-title reveal reveal-delay-1">
+          Building quantum<br />systems from<br /><span class="grad-text">the ground up.</span>
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2"
+          style="text-shadow:0 1px 12px rgba(0,0,0,0.95),0 2px 32px rgba(0,0,0,0.8);background:rgba(4,4,13,0.45);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:8px;padding:0.6rem 0.9rem;display:inline-block;">
+          POSM is a student-led research group at the University of Minnesota developing experimental photonic, RF, and
+          optomechanical systems for quantum technologies.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="research.html" class="btn btn-primary" id="hero-research-btn">
+            Our Research
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="team.html" class="btn btn-ghost" id="hero-team-btn">Meet the Team</a>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════ -->
+    <div class="stats-bar" aria-label="Group highlights">
+      <div class="container">
+        <div class="stats-grid reveal-stagger" id="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" id="stat-students">15+</div>
+            <div class="stat-label">Student Researchers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-projects">7</div>
+            <div class="stat-label">Active Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-disciplines">4</div>
+            <div class="stat-label">Engineering Disciplines</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" id="stat-year">2025</div>
+            <div class="stat-label">Founded</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 1: Hardware-First
+  ═══════════════════════════════════════════ -->
+    <section class="feature-section" aria-labelledby="section-hardware">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-text reveal">
+            <div class="section-label">
+              <span class="label">What We Build</span>
+            </div>
+            <h2 class="display-lg mb-md" id="section-hardware">Making Quantum Hardware Click.</h2>
+            <p class="body-lg text-muted mb-lg">
+              Modern quantum technologies are limited by hardware that is often fragmented, inflexible, and hard to
+              integrate. POSM develops modular, customizable systems that make quantum hardware easier to connect,
+              control, and scale.
+            </p>
+            <a href="research.html" class="btn btn-ghost" id="hardware-research-btn">
+              Explore Research
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div class="feature-image reveal reveal-delay-2">
+            <img src="assets/images/optics_section.jpg" alt="Precision optical components on a lab breadboard"
+              loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a0a2e,#0d1a2e)'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 2: Student-led
+  ═══════════════════════════════════════════ -->
+    <section class="feature-section"
+      style="background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);"
+      aria-labelledby="section-student-led">
+      <div class="container">
+        <div class="feature-grid reverse">
+          <div class="feature-text reveal">
+            <div class="section-label">
+              <span class="label">Our Model</span>
+            </div>
+            <h2 class="display-lg mb-md" id="section-student-led">Lowering the Barrier to Research.</h2>
+            <p class="body-lg text-muted mb-lg">
+              POSM gives undergraduates early access to serious experimental research and the responsability to help
+              design it. Students learn by working with advanced tools, making real technical decisions, and
+              contributing to systems that move beyond the classroom.
+            </p>
+            <a href="team.html" class="btn btn-ghost" id="student-team-btn">
+              Meet the Team
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+          <div class="feature-image reveal reveal-delay-2">
+            <img src="assets/images/vacuum_chamber.png" alt="Ultra-high vacuum hardware in the quantum lab"
+              loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0a1a2e,#1a0a2e)'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SECTION 3: Built at the Intersection
+  ═══════════════════════════════════════════ -->
+    <section class="feature-section" aria-labelledby="section-intersection">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-text reveal">
+            <div class="section-label">
+              <span class="label">Software</span>
+            </div>
+            <h2 class="display-lg mb-md" id="section-intersection">Toward Self-Optimizing Quantum Labs.</h2>
+            <p class="body-lg text-muted mb-lg">
+              POSMq connects digital twins with live measurements and automated control, helping experimental setups
+              tune and stabilize themselves. By reducing manual intervention, we aim to make complex quantum systems
+              easier to run, diagnose, and improve.
+            </p>
+          </div>
+          <div class="feature-image reveal reveal-delay-2">
+            <img src="assets/images/rf_electronics.png" alt="RF and electronic instrumentation" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0a102e,#1a0a2e)'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       RESEARCH AREA TABS (PsiQuantum-style)
+  ═══════════════════════════════════════════ -->
+    <section class="research-tabs" aria-labelledby="research-overview-heading">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="label">Research Areas</span>
+        </div>
+        <h2 class="display-lg mb-xl reveal" id="research-overview-heading">
+          What we work on.
+        </h2>
+
+        <div class="tabs-header reveal" role="tablist" aria-label="Research areas">
+          <button class="tab-btn active" id="tab-optics" data-tab="optics" role="tab" aria-selected="true"
+            aria-controls="panel-optics">Cold Atoms</button>
+          <button class="tab-btn" id="tab-laser" data-tab="laser" role="tab" aria-selected="false"
+            aria-controls="panel-laser">RF Electronics</button>
+          <button class="tab-btn" id="tab-rf" data-tab="rf" role="tab" aria-selected="false"
+            aria-controls="panel-rf">Photonics</button>
+          <button class="tab-btn" id="tab-photonics" data-tab="photonics" role="tab" aria-selected="false"
+            aria-controls="panel-photonics">Control Software</button>
+        </div>
+
+        <div id="panel-optics" class="tab-panel active" role="tabpanel" aria-labelledby="tab-optics">
+          <div class="tab-panel-text">
+            <h3 class="display-md mb-md">Neutral-Atom Quantum Testbed.</h3>
+            <p class="body-lg text-muted mb-lg">
+              A cold-atom platform for laser cooling, atom transport, and Rydberg-based sensing.
+            </p>
+            <a href="research.html" class="btn btn-ghost btn-sm">Learn more →</a>
+          </div>
+          <div class="tab-panel-image">
+            <!-- ⚠️ Drop your Cold Atoms photo as: assets/images/tab-cold-atoms.jpg -->
+            <img src="assets/images/tab-cold-atoms.png" alt="Cold atoms experimental setup" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#1a0a2e,#0d1a2e)'" />
+          </div>
+        </div>
+
+        <div id="panel-laser" class="tab-panel" role="tabpanel" aria-labelledby="tab-laser">
+          <div class="tab-panel-text">
+            <h3 class="display-md mb-md">Quantum RF Hardware.</h3>
+            <p class="body-lg text-muted mb-lg">
+              Custom RF and microwave systems for quantum control, from board-level hardware to RFIC designs
+              built for tapeout.
+            </p>
+            <a href="research.html" class="btn btn-ghost btn-sm">Learn more →</a>
+          </div>
+          <div class="tab-panel-image">
+            <!-- ⚠️ Drop your RF Electronics photo as: assets/images/tab-rf-electronics.jpg -->
+            <img src="assets/images/tab-rf-electronics.png" alt="RF electronics and PCB hardware" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#2a0a0e,#1a0a2e)'" />
+          </div>
+        </div>
+
+        <div id="panel-rf" class="tab-panel" role="tabpanel" aria-labelledby="tab-rf">
+          <div class="tab-panel-text">
+            <h3 class="display-md mb-md">Photonic Interface Hardware.</h3>
+            <p class="body-lg text-muted mb-lg">
+              Custom optical, electro-optic, and optomechanical hardware for shaping, routing, and interfacing light
+              across lasers, fibers, modulators, and experimental systems.
+            </p>
+            <a href="research.html" class="btn btn-ghost btn-sm">Learn more →</a>
+          </div>
+          <div class="tab-panel-image">
+            <!-- ⚠️ Drop your Photonics photo as: assets/images/tab-photonics.jpg -->
+            <img src="assets/images/tab-photonics.png" alt="Photonic interface hardware" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0a102e,#1a0a2e)'" />
+          </div>
+        </div>
+
+        <div id="panel-photonics" class="tab-panel" role="tabpanel" aria-labelledby="tab-photonics">
+          <div class="tab-panel-text">
+            <h3 class="display-md mb-md">POSMq: Model-Based Lab Control.</h3>
+            <p class="body-lg text-muted mb-lg">
+              Software that maps hardware settings, sensor streams, and digital models into a live control layer for
+              tuning experiments, detecting drift, and automating setup decisions.
+            </p>
+            <a href="research.html" class="btn btn-ghost btn-sm">Learn more →</a>
+          </div>
+          <div class="tab-panel-image">
+            <!-- ⚠️ Drop your Control Software photo as: assets/images/tab-control-software.jpg -->
+            <img src="assets/images/tab-control-software.png" alt="POSMq control software interface" loading="lazy"
+              onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0a1a2e,#1a0a2e)'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       HISTORY SECTION
+  ═══════════════════════════════════════════ -->
+    <section class="history-section section" aria-labelledby="history-heading">
+      <div class="container">
+        <div class="history-inner reveal">
+          <div class="history-year" aria-hidden="true">2025</div>
+          <div class="history-text">
+            <div class="section-label" style="justify-content:center;margin-bottom:var(--space-md)">
+              <span class="label">Our Origin</span>
+            </div>
+            <h2 class="display-lg mb-md" id="history-heading">Started in August 2025.</h2>
+            <p class="body-lg text-muted" style="max-width:600px;margin-inline:auto">
+              Developed initially as a student group at the University of Minnesota in Summer 2025, POSM was created to
+              give students a hands-on path into learning about photonics, RF, electronics, optomechanics, and quantum
+              optics. Today, the group focuses on designing reliable hardware that makes advanced optical
+              experimentation easier to access and implement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       LATEST UPDATES
+  ═══════════════════════════════════════════ -->
+    <section class="section" style="background:var(--bg-surface);border-top:1px solid var(--border);"
+      aria-labelledby="updates-heading">
+      <div class="container">
+        <div class="flex-between mb-xl reveal">
+          <div>
+            <div class="section-label">
+              <span class="label">Latest</span>
+            </div>
+            <h2 class="display-md" id="updates-heading">Project updates.</h2>
+          </div>
+          <a href="news-updates.html" class="btn btn-ghost" id="all-updates-btn" style="flex-shrink:0">
+            All Updates
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="news-grid reveal-stagger" id="news-grid">
+          <!-- Update Card 1 -->
+          <article class="news-card">
+            <div class="news-card-img">
+              <img src="assets/images/laser_optics.png" alt="Spectroscopy lock project" loading="lazy"
+                onerror="this.style.display='none'" />
+            </div>
+            <div class="news-card-body">
+              <div class="news-card-date">June 2026</div>
+              <h3 class="news-card-title">Spectroscopy Lock, Vacuum Hardware, and Student Project Assignments</h3>
+              <p class="news-card-excerpt">This month the team brought up our first spectroscopy lock, completed initial
+                vacuum system characterization, and assigned individual student project tracks.</p>
+              <a href="news-updates.html" class="news-card-link" aria-label="Read more about June 2026 update">
+                Read Update
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Update Card 2 -->
+          <article class="news-card">
+            <div class="news-card-img">
+              <img src="assets/images/rf_electronics.png" alt="PCB design milestone" loading="lazy"
+                onerror="this.style.display='none'" />
+            </div>
+            <div class="news-card-body">
+              <div class="news-card-date">May 2026</div>
+              <h3 class="news-card-title">PCB Design Cycle Complete and RF Characterization Begins</h3>
+              <p class="news-card-excerpt">The first custom PCB run was completed and returned for assembly. RF
+                characterization of servo electronics started this month.</p>
+              <a href="news-updates.html" class="news-card-link" aria-label="Read more about May 2026 update">
+                Read Update
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Update Card 3 -->
+          <article class="news-card">
+            <div class="news-card-img">
+              <img src="assets/images/optics_section.png" alt="Optics table setup" loading="lazy"
+                onerror="this.style.display='none'" />
+            </div>
+            <div class="news-card-body">
+              <div class="news-card-date">April 2026</div>
+              <h3 class="news-card-title">Optics Table Build-Out and New Student Onboarding</h3>
+              <p class="news-card-excerpt">The optical table was fully populated and aligned for the first time. Three
+                new students joined the group and completed their initial training.</p>
+              <a href="news-updates.html" class="news-card-link" aria-label="Read more about April 2026 update">
+                Read Update
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       SPONSOR CTA
+  ═══════════════════════════════════════════ -->
+    <section class="sponsor-cta" aria-labelledby="sponsor-heading">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label" style="justify-content:center;margin-bottom:var(--space-md)">
+            <span class="label">Partners &amp; Sponsors</span>
+          </div>
+          <h2 class="display-lg mb-md" id="sponsor-heading">Partners make the work possible.</h2>
+          <p class="body-lg text-muted" style="max-width:540px;margin-inline:auto;margin-bottom:var(--space-lg)">
+            Sponsor support, equipment loans, parts donations, and technical mentorship directly accelerate what
+            students can build.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <a href="sponsors-join.html" class="btn btn-primary" id="sponsor-cta-btn">Become a Sponsor</a>
+            <a href="sponsors-current.html" class="btn btn-ghost" id="current-sponsors-btn">View Current Sponsors</a>
+          </div>
+
+          <div class="sponsor-logo-row" aria-label="Current sponsor placeholders">
+            <div class="sponsor-logo-placeholder">SPONSOR</div>
+            <div class="sponsor-logo-placeholder">SPONSOR</div>
+            <div class="sponsor-logo-placeholder">SPONSOR</div>
+            <div class="sponsor-logo-placeholder">SPONSOR</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       CONTACT CTA
+  ═══════════════════════════════════════════ -->
+    <section class="contact-cta section" aria-labelledby="contact-cta-heading">
+      <div class="container">
+        <div class="reveal" style="max-width:600px;margin-inline:auto">
+          <h2 class="display-lg mb-md" id="contact-cta-heading">
+            Interested in<br /><span class="grad-text">POSM?</span>
+          </h2>
+          <p class="body-lg text-muted mb-lg">
+            Whether you're a student looking to join, a company interested in sponsoring, or a researcher looking to
+            collaborate — we'd love to hear from you.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary" id="contact-cta-btn">Get in Touch</a>
+            <a href="outreach.html" class="btn btn-ghost" id="outreach-btn">Our Outreach</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="display:inline-flex" aria-label="POSM home">
+            <div class="nav-logo-mark" aria-hidden="true">P</div>
+            POSM
+          </a>
+          <p>A student-led quantum optics and AMO hardware research group at the University of Minnesota, advised by
+            Prof. Alexander McLeod.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Group</h4>
+          <a href="team.html">Team</a>
+          <a href="research.html">Research</a>
+          <a href="outreach.html">Outreach</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>News</h4>
+          <a href="news-updates.html">Project Updates</a>
+          <a href="news-publications.html">Publications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sponsors</h4>
+          <a href="sponsors-current.html">Current Sponsors</a>
+          <a href="sponsors-join.html">Become a Sponsor</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025–2026 POSM Research Group · University of Minnesota</span>
+        <span>Advised by Prof. Alexander McLeod</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

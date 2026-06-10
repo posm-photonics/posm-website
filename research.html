@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — POSM Quantum Optics Research Group</title>
+  <meta name="description" content="POSM research areas: precision optics, laser stabilization, AMO hardware, RF and FPGA instrumentation, photonics, and quantum systems engineering." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="POSM home"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link" data-active="true">Research</a></li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem">Project Updates</a><a href="news-publications.html" role="menuitem">Publications</a></div>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
+        </li>
+        <li class="nav-item"><a href="outreach.html" class="nav-link">Outreach</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="sponsors-join.html" class="btn btn-primary btn-sm">Support POSM</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a href="research.html" class="mobile-menu-link" style="color:var(--white)">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html" class="mobile-menu-sub">↳ Project Updates</a><a href="news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <div class="mobile-menu-divider"></div>
+    <a href="outreach.html" class="mobile-menu-link">Outreach</a><a href="contact.html" class="mobile-menu-link">Contact</a>
+    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full" style="justify-content:center">Support POSM</a></div>
+  </div>
+
+  <main id="main-content">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-labelledby="research-page-heading">
+    <div class="container page-hero-content">
+      <div class="section-label reveal"><span class="label">What We Build</span></div>
+      <h1 class="display-xl reveal reveal-delay-1" id="research-page-heading">Research.</h1>
+      <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:600px;margin-top:var(--space-md)">
+        POSM's research is hardware-first and hands-on. We develop the physical instruments and infrastructure needed to conduct cutting-edge AMO and quantum systems experiments.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTRO STATEMENT -->
+  <section class="section-sm" style="border-bottom:1px solid var(--border)" aria-labelledby="research-philosophy">
+    <div class="container">
+      <div class="feature-grid align-items-start">
+        <div class="reveal">
+          <h2 class="display-md mb-md" id="research-philosophy">NDA-safe, research-grade.</h2>
+          <p class="body-lg text-muted">
+            Our research program covers multiple technical domains. Each project is student-owned and advisor-guided. Some specifics are kept confidential at the direction of our PI — the descriptions below capture the spirit and scope of our work without disclosing proprietary details.
+          </p>
+        </div>
+        <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:1rem">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem">
+            <div class="label mb-xs">Advised by</div>
+            <div class="heading-sm">Prof. Alexander McLeod</div>
+            <div class="body-sm text-muted">University of Minnesota</div>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem">
+            <div class="label mb-xs">Approach</div>
+            <div class="body-md">Student ownership of complex experimental systems from design through characterization.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH AREAS GRID -->
+  <section class="section" aria-labelledby="areas-heading">
+    <div class="container">
+      <div class="section-label reveal"><span class="label">Areas</span></div>
+      <h2 class="display-md mb-xl reveal reveal-delay-1" id="areas-heading">Research areas.</h2>
+
+      <div class="research-areas reveal-stagger" id="research-areas">
+
+        <!-- Area 1: Precision Optics -->
+        <article class="research-card">
+          <div class="research-card-img">
+            <img src="assets/images/optics_section.png" alt="Precision optical setup" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a0a2e,#0d1a2e)'" />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">🔭</div>
+            <h3 class="heading-sm mb-sm">Precision Optical Systems</h3>
+            <p class="body-md text-muted">
+              We design and build high-stability optical assemblies on vibration-isolated tables. This includes beam-shaping, interferometric setups, polarization control, and free-space coupling relevant to atomic physics experiments.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area 2: Laser Control -->
+        <article class="research-card">
+          <div class="research-card-img">
+            <img src="assets/images/laser_optics.png" alt="Laser stabilization optics" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#2a0a0e,#1a0a2e)'" />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">🔴</div>
+            <h3 class="heading-sm mb-sm">Laser Stabilization and Control</h3>
+            <p class="body-md text-muted">
+              We develop servo electronics and digital control loops for narrow-linewidth laser frequency stabilization. Projects span Pound–Drever–Hall locking, saturation spectroscopy, and amplitude modulation control.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area 3: AMO Hardware -->
+        <article class="research-card">
+          <div class="research-card-img">
+            <img src="assets/images/vacuum_chamber.png" alt="UHV vacuum system" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0a1a2e,#0d1020)'" />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">⚗️</div>
+            <h3 class="heading-sm mb-sm">AMO Hardware Platforms</h3>
+            <p class="body-md text-muted">
+              We assemble and characterize ultra-high vacuum systems for atomic physics experiments, including chamber integration, ion pumping, RGA diagnostics, and optical access design.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area 4: RF and FPGA -->
+        <article class="research-card">
+          <div class="research-card-img">
+            <img src="assets/images/rf_electronics.png" alt="RF and FPGA electronics" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0a102e,#1a0a2e)'" />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">📡</div>
+            <h3 class="heading-sm mb-sm">RF, FPGA, and Embedded Instrumentation</h3>
+            <p class="body-md text-muted">
+              We design custom PCBs, work with FPGA-based control platforms, and build RF sources and measurement instruments. Projects include frequency synthesis, impedance matching, and real-time digital control.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area 5: Photonics -->
+        <article class="research-card">
+          <div class="research-card-img">
+            <img src="assets/images/photonics_abstract.png" alt="Photonic systems" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#0a1a2e,#1a0a2e)'" />
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">💡</div>
+            <h3 class="heading-sm mb-sm">Photonics and Quantum Systems Engineering</h3>
+            <p class="body-md text-muted">
+              We integrate fiber-optic components, photonic chips, and single-photon detectors into experimental platforms. This work bridges bench-top optics with scalable photonic integration approaches.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area 6: Controls and Software -->
+        <article class="research-card">
+          <div class="research-card-img" style="background:linear-gradient(135deg,#0d1a2e 0%, #0a0a1a 100%);display:flex;align-items:center;justify-content:center">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+              <rect x="10" y="20" width="60" height="40" rx="4" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+              <path d="M25 35l8 8-8 8M40 51h15" stroke="rgba(34,211,238,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="research-card-body">
+            <div class="research-card-icon" aria-hidden="true">⚙️</div>
+            <h3 class="heading-sm mb-sm">Scientific Software and Control Systems</h3>
+            <p class="body-md text-muted">
+              We build software for laboratory automation, data acquisition, and instrument control. This spans Python-based experiment sequencing, ARTIQ/Sinara integration, and custom GUI dashboards.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sponsor-cta section-sm" aria-labelledby="research-cta-heading">
+    <div class="container">
+      <div class="reveal" style="max-width:540px;margin-inline:auto">
+        <h2 class="display-md mb-md" id="research-cta-heading">Want to support this work?</h2>
+        <p class="body-lg text-muted mb-lg">Equipment donations, fabrication support, and technical mentorship make our projects possible.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="sponsors-join.html" class="btn btn-primary">Become a Sponsor</a>
+          <a href="contact.html" class="btn btn-ghost">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a><p>Student-led quantum optics and AMO hardware research · University of Minnesota · Advised by Prof. Alexander McLeod.</p></div>
+        <div class="footer-col"><h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a href="outreach.html">Outreach</a><a href="contact.html">Contact</a></div>
+        <div class="footer-col"><h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a></div>
+        <div class="footer-col"><h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a Sponsor</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span><span>Advised by Prof. Alexander McLeod</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
