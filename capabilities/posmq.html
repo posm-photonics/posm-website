@@ -1,222 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>POSMq — Model-Based Lab Control | POSM</title>
-  <meta name="description" content="POSMq: POSM's developing model-based lab-control platform connecting hardware settings, sensor streams, and digital models for experimental physics systems." />
+  <meta name="description"
+    content="POSMq: POSM's developing model-based lab-control platform connecting hardware settings, sensor streams, and digital models for experimental physics systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
+
 <body>
 
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="../index.html" class="nav-logo" aria-label="POSM home"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a>
+      <a href="../index.html" class="nav-logo" aria-label="POSM home">
+        <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+      </a>
       <ul class="nav-links" role="list">
         <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="../team.html" class="nav-link">Team</a></li>
         <li class="nav-item"><a href="../research.html" class="nav-link">Research</a></li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="../news-updates.html" role="menuitem">Project Updates</a><a href="../news-publications.html" role="menuitem">Publications</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="../news-updates.html" role="menuitem">Project Updates</a><a
+              href="../news-publications.html" role="menuitem">Publications</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="../sponsors-current.html" role="menuitem">Current Sponsors</a><a href="../sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="../sponsors-current.html" role="menuitem">Current
+              Sponsors</a><a href="../sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" data-active="true">Capabilities<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="hardware.html" role="menuitem">Hardware</a><a href="posmq.html" role="menuitem" style="color:var(--white)">POSMq</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" data-active="true">Capabilities<svg
+              viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="hardware.html" role="menuitem">Hardware</a><a href="posmq.html"
+              role="menuitem" style="color:var(--white)">POSMq</a></div>
         </li>
         <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <a href="../sponsors-join.html" class="btn btn-primary btn-sm">Support POSM</a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu"
+          aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <a href="../index.html" class="mobile-menu-link">Home</a><a href="../team.html" class="mobile-menu-link">Team</a><a href="../research.html" class="mobile-menu-link">Research</a>
-    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="../news-updates.html" class="mobile-menu-sub">↳ Project Updates</a><a href="../news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <a href="../index.html" class="mobile-menu-link">Home</a><a href="../team.html" class="mobile-menu-link">Team</a><a
+      href="../research.html" class="mobile-menu-link">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="../news-updates.html"
+      class="mobile-menu-sub">↳ Project Updates</a><a href="../news-publications.html" class="mobile-menu-sub">↳
+      Publications</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="../sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a><a href="../sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="../sponsors-current.html"
+      class="mobile-menu-sub">↳ Current Sponsors</a><a href="../sponsors-join.html" class="mobile-menu-sub">↳ For
+      Potential Sponsors</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="hardware.html" class="mobile-menu-sub">↳ Hardware</a><a href="posmq.html" class="mobile-menu-sub" style="color:var(--purple-bright)">↳ POSMq</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="hardware.html"
+      class="mobile-menu-sub">↳ Hardware</a><a href="posmq.html" class="mobile-menu-sub"
+      style="color:var(--purple-bright)">↳ POSMq</a>
     <div class="mobile-menu-divider"></div>
     <a href="../contact.html" class="mobile-menu-link">Contact</a>
-    <div style="margin-top:1.5rem"><a href="../sponsors-join.html" class="btn btn-primary w-full" style="justify-content:center">Support POSM</a></div>
+    <div style="margin-top:1.5rem"><a href="../sponsors-join.html" class="btn btn-primary w-full"
+        style="justify-content:center">Support POSM</a></div>
   </div>
 
   <main id="main-content">
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SECTION 1 — HERO (centered with animated orb)
        ═══════════════════════════════════════════════════ -->
-  <section class="pq-hero" aria-labelledby="posmq-heading">
-    <div class="pq-hero-orb" aria-hidden="true"></div>
-    <div class="pq-hero-orb pq-hero-orb-2" aria-hidden="true"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <div class="page-hero-content" style="text-align:center">
-        <div class="section-label reveal" style="justify-content:center"><span class="label">Lab Control</span></div>
-        <h1 class="display-xl reveal reveal-delay-1" id="posmq-heading" style="font-size:clamp(3rem,7vw,5.5rem)">POSM<span class="grad-text">q</span></h1>
-        <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:500px;margin:var(--space-md) auto 0">
-          Model-based lab control for experimental physics systems.
-        </p>
+    <section class="pq-hero" aria-labelledby="posmq-heading">
+      <div class="pq-hero-orb" aria-hidden="true"></div>
+      <div class="pq-hero-orb pq-hero-orb-2" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1">
+        <div class="page-hero-content" style="text-align:center">
+          <div class="section-label reveal" style="justify-content:center"><span class="label">Lab Control</span></div>
+          <h1 class="display-xl reveal reveal-delay-1" id="posmq-heading" style="font-size:clamp(3rem,7vw,5.5rem)">
+            POSM<span class="grad-text">q</span></h1>
+          <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:500px;margin:var(--space-md) auto 0">
+            Model-based lab control for experimental physics systems.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SECTION 2 — FEATURE STRIP (luminous accent bar)
        ═══════════════════════════════════════════════════ -->
-  <div class="pq-strip">
-    <div class="pq-strip-glow" aria-hidden="true"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <p class="pq-strip-text reveal">Connecting instruments, models, and experimental decisions.</p>
+    <div class="pq-strip">
+      <div class="pq-strip-glow" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1">
+        <p class="pq-strip-text reveal">Connecting instruments, models, and experimental decisions.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SECTION 3 — THREE PILLARS (asymmetric card grid)
        ✏️ Edit titles and descriptions below
        ═══════════════════════════════════════════════════ -->
-  <section class="pq-sec pq-sec-pillars" aria-labelledby="pq-pillars-heading">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:var(--space-2xl)" class="reveal">
-        <div class="section-label" style="justify-content:center"><span class="label">Core Layers</span></div>
-        <h2 class="display-lg" id="pq-pillars-heading">Three layers, one platform.</h2>
+    <section class="pq-sec pq-sec-pillars" aria-labelledby="pq-pillars-heading">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--space-2xl)" class="reveal">
+          <div class="section-label" style="justify-content:center"><span class="label">Core Layers</span></div>
+          <h2 class="display-lg" id="pq-pillars-heading">Three layers, one platform.</h2>
+        </div>
+
+        <div class="pq-pillar-grid">
+          <!-- ✏️ Pillar 1: Hardware State — tall card -->
+          <div class="pq-pillar-card pq-pillar-tall reveal">
+            <div class="pq-pillar-num">01</div>
+            <h3 class="heading-sm mb-sm">Hardware State</h3>
+            <p class="body-md text-muted">Track settings, device states, and control parameters across an experiment.
+            </p>
+            <div class="pq-pillar-deco" aria-hidden="true">
+              <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.2">
+                <rect x="10" y="10" width="35" height="25" rx="3" />
+                <rect x="55" y="10" width="35" height="25" rx="3" />
+                <rect x="30" y="45" width="40" height="25" rx="3" />
+                <line x1="27" y1="35" x2="50" y2="45" />
+                <line x1="73" y1="35" x2="50" y2="45" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- ✏️ Pillar 2: Sensor Streams — wide card -->
+          <div class="pq-pillar-card pq-pillar-wide reveal reveal-delay-1">
+            <div class="pq-pillar-num">02</div>
+            <h3 class="heading-sm mb-sm">Sensor Streams</h3>
+            <p class="body-md text-muted">Bring optical, electrical, and environmental signals into one monitoring
+              layer.</p>
+            <div class="pq-pillar-deco pq-pillar-deco-wide" aria-hidden="true">
+              <svg viewBox="0 0 200 50" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15">
+                <path d="M0 25 Q25 5 50 25 Q75 45 100 25 Q125 5 150 25 Q175 45 200 25" />
+                <path d="M0 35 Q25 15 50 35 Q75 55 100 35 Q125 15 150 35 Q175 55 200 35" opacity="0.5" />
+                <path d="M0 15 Q25 -5 50 15 Q75 35 100 15 Q125 -5 150 15 Q175 35 200 15" opacity="0.5" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- ✏️ Pillar 3: Digital Models — compact card -->
+          <div class="pq-pillar-card pq-pillar-compact reveal reveal-delay-2">
+            <div class="pq-pillar-num">03</div>
+            <h3 class="heading-sm mb-sm">Digital Models</h3>
+            <p class="body-md text-muted">Use model-based representations to support tuning, drift detection, and setup
+              decisions.</p>
+            <div class="pq-pillar-deco" aria-hidden="true">
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.2">
+                <circle cx="40" cy="40" r="30" />
+                <circle cx="40" cy="40" r="18" />
+                <circle cx="40" cy="40" r="6" />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="pq-pillar-grid">
-        <!-- ✏️ Pillar 1: Hardware State — tall card -->
-        <div class="pq-pillar-card pq-pillar-tall reveal">
-          <div class="pq-pillar-num">01</div>
-          <h3 class="heading-sm mb-sm">Hardware State</h3>
-          <p class="body-md text-muted">Track settings, device states, and control parameters across an experiment.</p>
-          <div class="pq-pillar-deco" aria-hidden="true">
-            <svg viewBox="0 0 100 80" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.2">
-              <rect x="10" y="10" width="35" height="25" rx="3"/><rect x="55" y="10" width="35" height="25" rx="3"/>
-              <rect x="30" y="45" width="40" height="25" rx="3"/>
-              <line x1="27" y1="35" x2="50" y2="45"/><line x1="73" y1="35" x2="50" y2="45"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- ✏️ Pillar 2: Sensor Streams — wide card -->
-        <div class="pq-pillar-card pq-pillar-wide reveal reveal-delay-1">
-          <div class="pq-pillar-num">02</div>
-          <h3 class="heading-sm mb-sm">Sensor Streams</h3>
-          <p class="body-md text-muted">Bring optical, electrical, and environmental signals into one monitoring layer.</p>
-          <div class="pq-pillar-deco pq-pillar-deco-wide" aria-hidden="true">
-            <svg viewBox="0 0 200 50" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15">
-              <path d="M0 25 Q25 5 50 25 Q75 45 100 25 Q125 5 150 25 Q175 45 200 25"/>
-              <path d="M0 35 Q25 15 50 35 Q75 55 100 35 Q125 15 150 35 Q175 55 200 35" opacity="0.5"/>
-              <path d="M0 15 Q25 -5 50 15 Q75 35 100 15 Q125 -5 150 15 Q175 35 200 15" opacity="0.5"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- ✏️ Pillar 3: Digital Models — compact card -->
-        <div class="pq-pillar-card pq-pillar-compact reveal reveal-delay-2">
-          <div class="pq-pillar-num">03</div>
-          <h3 class="heading-sm mb-sm">Digital Models</h3>
-          <p class="body-md text-muted">Use model-based representations to support tuning, drift detection, and setup decisions.</p>
-          <div class="pq-pillar-deco" aria-hidden="true">
-            <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="0.4" opacity="0.2">
-              <circle cx="40" cy="40" r="30"/><circle cx="40" cy="40" r="18"/><circle cx="40" cy="40" r="6"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SECTION 4 — WORKFLOW (pipeline visual on dark gradient)
        ═══════════════════════════════════════════════════ -->
-  <section class="pq-sec pq-sec-workflow" aria-labelledby="pq-workflow-heading">
-    <div class="pq-wf-gradient" aria-hidden="true"></div>
-    <div class="container" style="position:relative;z-index:1">
-      <div style="text-align:center;margin-bottom:var(--space-xl)" class="reveal">
-        <div class="section-label" style="justify-content:center"><span class="label">Workflow</span></div>
-        <h2 class="display-lg" id="pq-workflow-heading">How it works.</h2>
-      </div>
+    <section class="pq-sec pq-sec-workflow" aria-labelledby="pq-workflow-heading">
+      <div class="pq-wf-gradient" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1">
+        <div style="text-align:center;margin-bottom:var(--space-xl)" class="reveal">
+          <div class="section-label" style="justify-content:center"><span class="label">Workflow</span></div>
+          <h2 class="display-lg" id="pq-workflow-heading">How it works.</h2>
+        </div>
 
-      <div class="pq-pipeline reveal">
-        <div class="pq-pipeline-track" aria-hidden="true"></div>
-        <div class="pq-pipe-step">
-          <div class="pq-pipe-node">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2l3-7 4 14 3-7h2"/><circle cx="20" cy="12" r="2"/></svg>
+        <div class="pq-pipeline reveal">
+          <div class="pq-pipeline-track" aria-hidden="true"></div>
+          <div class="pq-pipe-step">
+            <div class="pq-pipe-node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M2 12h2l3-7 4 14 3-7h2" />
+                <circle cx="20" cy="12" r="2" />
+              </svg>
+            </div>
+            <div class="pq-pipe-label">Measure</div>
+            <div class="pq-pipe-desc">Collect signals from instruments</div>
           </div>
-          <div class="pq-pipe-label">Measure</div>
-          <div class="pq-pipe-desc">Collect signals from instruments</div>
-        </div>
-        <div class="pq-pipe-step">
-          <div class="pq-pipe-node pq-pipe-node-accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+          <div class="pq-pipe-step">
+            <div class="pq-pipe-node pq-pipe-node-accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="12" cy="12" r="1" />
+              </svg>
+            </div>
+            <div class="pq-pipe-label">Model</div>
+            <div class="pq-pipe-desc">Compare to digital representations</div>
           </div>
-          <div class="pq-pipe-label">Model</div>
-          <div class="pq-pipe-desc">Compare to digital representations</div>
-        </div>
-        <div class="pq-pipe-step">
-          <div class="pq-pipe-node">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4m-7.07-15.07l2.83 2.83m8.49 8.49l2.83 2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          <div class="pq-pipe-step">
+            <div class="pq-pipe-node">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2v4m0 12v4m-7.07-15.07l2.83 2.83m8.49 8.49l2.83 2.83" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <div class="pq-pipe-label">Adjust</div>
+            <div class="pq-pipe-desc">Recommend parameter changes</div>
           </div>
-          <div class="pq-pipe-label">Adjust</div>
-          <div class="pq-pipe-desc">Recommend parameter changes</div>
-        </div>
-        <div class="pq-pipe-step">
-          <div class="pq-pipe-node pq-pipe-node-accent">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          <div class="pq-pipe-step">
+            <div class="pq-pipe-node pq-pipe-node-accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8m-4-4v4" />
+              </svg>
+            </div>
+            <div class="pq-pipe-label">Monitor</div>
+            <div class="pq-pipe-desc">Detect drift and system changes</div>
           </div>
-          <div class="pq-pipe-label">Monitor</div>
-          <div class="pq-pipe-desc">Detect drift and system changes</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        SECTION 5 — EARLY ACCESS (bright glass panel on dark)
        ═══════════════════════════════════════════════════ -->
-  <section class="pq-sec pq-sec-ea" aria-labelledby="pq-ea-heading">
-    <div class="container">
-      <div class="pq-ea-panel reveal">
-        <div class="pq-ea-panel-bg" aria-hidden="true"></div>
-        <div class="pq-ea-panel-content">
-          <div class="section-label"><span class="label">Early Access</span></div>
-          <h2 class="display-md mb-md" id="pq-ea-heading">POSMq Early Access</h2>
-          <p class="body-lg text-muted mb-lg" style="max-width:520px">
-            POSMq is being developed as a model-based lab-control layer for experimental physics systems. We are interested in conversations with research groups, laboratories, and technical partners who may want to pilot future tools for system monitoring, tuning support, drift detection, and automated setup decisions.
-          </p>
-          <a href="../contact.html" class="btn btn-primary">Discuss Early Access<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left:0.25rem"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        <div class="pq-ea-decoration" aria-hidden="true">
-          <div class="pq-ea-arc pq-ea-arc-1"></div>
-          <div class="pq-ea-arc pq-ea-arc-2"></div>
-          <div class="pq-ea-arc pq-ea-arc-3"></div>
+    <section class="pq-sec pq-sec-ea" aria-labelledby="pq-ea-heading">
+      <div class="container">
+        <div class="pq-ea-panel reveal">
+          <div class="pq-ea-panel-bg" aria-hidden="true"></div>
+          <div class="pq-ea-panel-content">
+            <div class="section-label"><span class="label">Early Access</span></div>
+            <h2 class="display-md mb-md" id="pq-ea-heading">POSMq Early Access</h2>
+            <p class="body-lg text-muted mb-lg" style="max-width:520px">
+              POSMq is being developed as a model-based lab-control layer for experimental physics systems. We are
+              interested in conversations with research groups, laboratories, and technical partners who may want to
+              pilot future tools for system monitoring, tuning support, drift detection, and automated setup decisions.
+            </p>
+            <a href="../contact.html" class="btn btn-primary">Discuss Early Access<svg width="16" height="16"
+                viewBox="0 0 16 16" fill="none" style="margin-left:0.25rem">
+                <path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+          </div>
+          <div class="pq-ea-decoration" aria-hidden="true">
+            <div class="pq-ea-arc pq-ea-arc-1"></div>
+            <div class="pq-ea-arc pq-ea-arc-2"></div>
+            <div class="pq-ea-arc pq-ea-arc-3"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </main>
 
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="../index.html" class="nav-logo" style="display:inline-flex"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a><p>Student-led quantum optics and AMO hardware research · University of Minnesota · Advised by Prof. Alexander McLeod.</p></div>
-        <div class="footer-col"><h4>Group</h4><a href="../team.html">Team</a><a href="../research.html">Research</a><a href="hardware.html">Hardware</a><a href="posmq.html">POSMq</a><a href="../contact.html">Contact</a></div>
-        <div class="footer-col"><h4>News</h4><a href="../news-updates.html">Project Updates</a><a href="../news-publications.html">Publications</a></div>
-        <div class="footer-col"><h4>Sponsors</h4><a href="../sponsors-current.html">Current Sponsors</a><a href="../sponsors-join.html">Become a Sponsor</a></div>
+        <div class="footer-brand"><a href="../index.html" class="nav-logo" style="display:inline-flex">
+            <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+          </a>
+          <p>Student-led quantum optics and AMO hardware research · University of Minnesota
+        </div>
+        <div class="footer-col">
+          <h4>Group</h4><a href="../team.html">Team</a><a href="../research.html">Research</a><a
+            href="hardware.html">Hardware</a><a href="posmq.html">POSMq</a><a href="../contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>News</h4><a href="../news-updates.html">Project Updates</a><a
+            href="../news-publications.html">Publications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sponsors</h4><a href="../sponsors-current.html">Current Sponsors</a><a href="../sponsors-join.html">Become
+            a Sponsor</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span><span>Advised by Prof. Alexander McLeod</span></div>
+      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span></div>
     </div>
   </footer>
   <script src="../assets/js/main.js"></script>
 </body>
+
 </html>

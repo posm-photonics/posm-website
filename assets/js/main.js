@@ -232,4 +232,63 @@
     }
   });
 
+  // ─── Team Page Slideshow ────────────────────────────────────
+  const slideshow = $('.team-slideshow');
+  if (slideshow) {
+    const slides = $$('.team-slide', slideshow);
+    const indicators = $$('.slide-indicator', slideshow);
+    const prevBtn = $('.slide-btn.prev', slideshow);
+    const nextBtn = $('.slide-btn.next', slideshow);
+    let currentIndex = 0;
+    let timer = null;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+
+      slides[currentIndex].classList.remove('active');
+      indicators[currentIndex].classList.remove('active');
+
+      currentIndex = index;
+
+      slides[currentIndex].classList.add('active');
+      indicators[currentIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      timer = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoPlay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoPlay(); });
+
+    indicators.forEach((indicator, idx) => {
+      indicator.addEventListener('click', () => {
+        showSlide(idx);
+        startAutoPlay();
+      });
+    });
+
+    slideshow.addEventListener('mouseenter', stopAutoPlay);
+    slideshow.addEventListener('mouseleave', startAutoPlay);
+
+    startAutoPlay();
+  }
+
 })();

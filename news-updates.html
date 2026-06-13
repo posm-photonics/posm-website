@@ -1,227 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Updates — POSM Quantum Optics Research Group</title>
-  <meta name="description" content="Monthly project updates from POSM — student-led quantum optics and AMO hardware research at the University of Minnesota." />
+  <meta name="description"
+    content="Monthly project updates from POSM — student-led quantum optics and AMO hardware research at the University of Minnesota." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="POSM home"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a>
+      <a href="index.html" class="nav-logo" aria-label="POSM home">
+        <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+      </a>
       <ul class="nav-links" role="list">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
         <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" data-active="true">News<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem" style="color:var(--white)">Project Updates</a><a href="news-publications.html" role="menuitem">Publications</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" data-active="true">News<svg
+              viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem"
+              style="color:var(--white)">Project Updates</a><a href="news-publications.html"
+              role="menuitem">Publications</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a
+              href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a
+              href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
         </li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <a href="sponsors-join.html" class="btn btn-primary btn-sm">Support POSM</a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu"
+          aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a href="research.html" class="mobile-menu-link">Research</a>
-    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html" class="mobile-menu-sub" style="color:var(--purple-bright)">↳ Project Updates</a><a href="news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a
+      href="research.html" class="mobile-menu-link">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html"
+      class="mobile-menu-sub" style="color:var(--purple-bright)">↳ Project Updates</a><a href="news-publications.html"
+      class="mobile-menu-sub">↳ Publications</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html"
+      class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential
+      Sponsors</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html" class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html"
+      class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
     <div class="mobile-menu-divider"></div><a href="contact.html" class="mobile-menu-link">Contact</a>
-    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full" style="justify-content:center">Support POSM</a></div>
+    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full"
+        style="justify-content:center">Support POSM</a></div>
   </div>
 
   <main id="main-content">
 
-  <section class="page-hero" style="padding-bottom:var(--space-lg)" aria-labelledby="updates-page-heading">
-    <div class="container page-hero-content">
-      <div class="section-label reveal"><span class="label">News</span></div>
-      <h1 class="display-xl reveal reveal-delay-1" id="updates-page-heading">Project Updates.</h1>
-      <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:520px;margin-top:var(--space-md)">
-        Monthly summaries of what POSM has been building, testing, and learning.
-      </p>
-    </div>
-  </section>
+    <section class="page-hero" style="padding-bottom:var(--space-lg)" aria-labelledby="updates-page-heading">
+      <div class="container page-hero-content">
+        <div class="section-label reveal"><span class="label">News</span></div>
+        <h1 class="display-xl reveal reveal-delay-1" id="updates-page-heading">Project Updates.</h1>
+        <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:520px;margin-top:var(--space-md)">
+          Monthly summaries of what POSM has been building, testing, and learning.
+        </p>
+      </div>
+    </section>
 
-  <section class="section" style="padding-top:var(--space-md)" aria-label="Project update posts">
-    <div class="container">
-      <div class="updates-layout">
+    <section class="section" style="padding-top:var(--space-md)" aria-label="Project update posts">
+      <div class="container">
+        <div class="updates-layout">
 
-        <!-- ═══════════════════════════════════════════════════
+          <!-- ═══════════════════════════════════════════════════
              LEFT: Filter Panel
              ═══════════════════════════════════════════════════ -->
-        <aside class="pub-filter-panel" id="updates-filter-panel">
-          <div class="pub-filter-heading">Filters</div>
+          <aside class="pub-filter-panel" id="updates-filter-panel">
+            <div class="pub-filter-heading">Filters</div>
 
-          <!-- Year -->
-          <div class="pub-filter-section-label">Year</div>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="year" value="2026" />
-            2026
-          </label>
+            <!-- Year -->
+            <div class="pub-filter-section-label">Year</div>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="year" value="2026" />
+              2026
+            </label>
 
-          <!-- Tags -->
-          <div class="pub-filter-section-label" style="margin-top:var(--space-md)">Tags</div>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="RF" />
-            RF
-          </label>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="PHOTONICS" />
-            PHOTONICS
-          </label>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="QUANTUM" />
-            QUANTUM
-          </label>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="POSMq" />
-            POSMq
-          </label>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="OUTREACH" />
-            OUTREACH
-          </label>
-          <label class="pub-filter-option">
-            <input type="checkbox" data-filter="tag" value="GROUP UPDATES" />
-            GROUP UPDATES
-          </label>
+            <!-- Tags -->
+            <div class="pub-filter-section-label" style="margin-top:var(--space-md)">Tags</div>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="RF" />
+              RF
+            </label>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="PHOTONICS" />
+              Photonics
+            </label>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="QUANTUM" />
+              Quantum
+            </label>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="POSMq" />
+              POSMq
+            </label>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="OUTREACH" />
+              Outreach
+            </label>
+            <label class="pub-filter-option">
+              <input type="checkbox" data-filter="tag" value="GROUP UPDATES" />
+              Group Updates
+            </label>
 
-          <!-- Clear -->
-          <button class="updates-clear-btn" id="clear-filters" type="button">Clear filters</button>
-        </aside>
+            <!-- Clear -->
+            <button class="updates-clear-btn" id="clear-filters" type="button">Clear filters</button>
+          </aside>
 
-        <!-- ═══════════════════════════════════════════════════
+          <!-- ═══════════════════════════════════════════════════
              RIGHT: Update Posts
              ✏️ To add a post, add a new <article> above the empty-state div.
              Each post needs: data-year, data-tags (comma-separated),
              data-slug (route), cover image path, and content.
              ═══════════════════════════════════════════════════ -->
-        <div class="updates-list" id="updates-list">
+          <div class="updates-list" id="updates-list">
 
-          <!-- ════════════════════════════════════════════════
+            <!-- ════════════════════════════════════════════════
                POST: June 2026
                ✏️ Cover image: assets/images/updates/june-2026-cover.jpg
                ✏️ Post image:  assets/images/updates/june-2026-post.jpg
                ════════════════════════════════════════════════ -->
-          <a href="project-updates/june-2026.html"
-             class="update-card reveal"
-             id="update-june-2026"
-             data-year="2026"
-             data-tags="RF,QUANTUM,GROUP UPDATES">
-            <div class="update-card-body">
-              <div class="label mb-xs">JUNE 2026</div>
-              <h2 class="heading-sm" style="margin-bottom:0.5rem">Spectroscopy Lock, Vacuum Hardware, and Student Project Assignments</h2>
-              <p class="body-md text-muted" style="margin-bottom:var(--space-md)">
-                This month the team achieved our first spectroscopy lock using saturated absorption spectroscopy on rubidium. The vacuum system was assembled, baked, and brought to base pressure. Individual student project tracks were formally assigned.
-              </p>
-              <div class="update-card-tags">
-                <span class="update-tag">RF</span>
-                <span class="update-tag">QUANTUM</span>
-                <span class="update-tag">GROUP UPDATES</span>
+            <a href="project-updates/june-2026.html" class="update-card reveal" id="update-june-2026" data-year="2026"
+              data-tags="RF,QUANTUM,GROUP UPDATES">
+              <div class="update-card-body">
+                <div class="label mb-xs">JUNE 2026</div>
+                <h2 class="heading-sm" style="margin-bottom:0.5rem">POSM Monthly Update — June 2026</h2>
+                <p class="body-md text-muted" style="margin-bottom:var(--space-md)">
+                  This month the team acquired over $6,000 in private donations and has begun its march towards
+                  developing a fully-modular, POSMq-powered rubidium spectroscopy lock by mid-August. Click to read
+                  more!
+                </p>
+                <div class="update-card-tags">
+                  <span class="update-tag">RF</span>
+                  <span class="update-tag">QUANTUM</span>
+                  <span class="update-tag">GROUP UPDATES</span>
+                </div>
               </div>
-            </div>
-            <div class="update-card-image">
-              <!-- ✏️ REPLACE with: assets/images/updates/june-2026-cover.jpg -->
-              <img src="assets/images/updates/june-2026-cover.jpg" alt="June 2026 update cover" loading="lazy" onerror="this.parentElement.classList.add('update-img-fallback')" />
-            </div>
-          </a>
+              <div class="update-card-image">
+                <!-- ✏️ REPLACE with: assets/images/updates/june-2026-cover.jpg -->
+                <img src="assets/images/updates/june-2026-cover.jpg" alt="June 2026 update cover" loading="lazy"
+                  onerror="this.parentElement.classList.add('update-img-fallback')" />
+              </div>
+            </a>
 
-          <!-- Empty state (shown when all posts filtered out) -->
-          <div class="updates-empty" id="updates-empty" style="display:none">
-            <p>No updates match the selected filters.</p>
-            <button class="btn btn-ghost btn-sm" onclick="document.getElementById('clear-filters').click()">Clear filters</button>
+            <!-- Empty state (shown when all posts filtered out) -->
+            <div class="updates-empty" id="updates-empty" style="display:none">
+              <p>No updates match the selected filters.</p>
+              <button class="btn btn-ghost btn-sm" onclick="document.getElementById('clear-filters').click()">Clear
+                filters</button>
+            </div>
+
           </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </main>
 
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a><p>Student-led quantum optics and AMO hardware research · University of Minnesota · Advised by Prof. Alexander McLeod.</p></div>
-        <div class="footer-col"><h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a></div>
-        <div class="footer-col"><h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a Sponsor</a></div>
+        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex">
+            <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+          </a>
+          <p>Student-led quantum optics and AMO hardware research · University of Minnesota</p>
+        </div>
+        <div class="footer-col">
+          <h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a
+            href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a
+            href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a
+            Sponsor</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span><span>Advised by Prof. Alexander McLeod</span></div>
+      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span></div>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 
   <!-- Updates filter logic -->
   <script>
-  (function() {
-    const panel = document.getElementById('updates-filter-panel');
-    const list = document.getElementById('updates-list');
-    const empty = document.getElementById('updates-empty');
-    const clearBtn = document.getElementById('clear-filters');
-    if (!panel || !list) return;
+    (function () {
+      const panel = document.getElementById('updates-filter-panel');
+      const list = document.getElementById('updates-list');
+      const empty = document.getElementById('updates-empty');
+      const clearBtn = document.getElementById('clear-filters');
+      if (!panel || !list) return;
 
-    const checkboxes = panel.querySelectorAll('input[type="checkbox"]');
-    const cards = list.querySelectorAll('.update-card');
+      const checkboxes = panel.querySelectorAll('input[type="checkbox"]');
+      const cards = list.querySelectorAll('.update-card');
 
-    function applyFilters() {
-      const yearFilters = [];
-      const tagFilters = [];
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          if (cb.dataset.filter === 'year') yearFilters.push(cb.value);
-          if (cb.dataset.filter === 'tag') tagFilters.push(cb.value);
-        }
-      });
+      function applyFilters() {
+        const yearFilters = [];
+        const tagFilters = [];
+        checkboxes.forEach(cb => {
+          if (cb.checked) {
+            if (cb.dataset.filter === 'year') yearFilters.push(cb.value);
+            if (cb.dataset.filter === 'tag') tagFilters.push(cb.value);
+          }
+        });
 
-      let visibleCount = 0;
-      cards.forEach(card => {
-        const cardYear = card.dataset.year;
-        const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cardYear = card.dataset.year;
+          const cardTags = (card.dataset.tags || '').split(',').map(t => t.trim());
 
-        let yearMatch = yearFilters.length === 0 || yearFilters.includes(cardYear);
-        let tagMatch = tagFilters.length === 0 || tagFilters.some(f => cardTags.includes(f));
+          let yearMatch = yearFilters.length === 0 || yearFilters.includes(cardYear);
+          let tagMatch = tagFilters.length === 0 || tagFilters.some(f => cardTags.includes(f));
 
-        if (yearMatch && tagMatch) {
-          card.style.display = '';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
+          if (yearMatch && tagMatch) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
 
-      if (empty) empty.style.display = visibleCount === 0 ? '' : 'none';
-    }
+        if (empty) empty.style.display = visibleCount === 0 ? '' : 'none';
+      }
 
-    checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
+      checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
 
-    if (clearBtn) {
-      clearBtn.addEventListener('click', function() {
-        checkboxes.forEach(cb => { cb.checked = false; });
-        applyFilters();
-      });
-    }
-  })();
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+          checkboxes.forEach(cb => { cb.checked = false; });
+          applyFilters();
+        });
+      }
+    })();
   </script>
 </body>
+
 </html>

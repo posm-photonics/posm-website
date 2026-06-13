@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team — POSM Quantum Optics Research Group</title>
+  <title>Team &mdash; POSM Quantum Optics Research Group</title>
   <meta name="description"
     content="Meet the students and faculty advisor of POSM, a student-led quantum optics and AMO hardware research group at the University of Minnesota." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
 </head>
 
 <body>
@@ -21,7 +21,8 @@
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo" aria-label="POSM home">
-        <div class="nav-logo-mark" aria-hidden="true">P</div>POSM
+        <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
       </a>
       <ul class="nav-links" role="list">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -52,8 +53,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a
+              href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
         </li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
@@ -70,14 +76,15 @@
     <a href="team.html" class="mobile-menu-link" style="color:var(--white)">Team</a>
     <a href="research.html" class="mobile-menu-link">Research</a>
     <div class="mobile-menu-link" style="color:var(--white)">News</div>
-    <a href="news-updates.html" class="mobile-menu-sub">↳ Project Updates</a>
-    <a href="news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <a href="news-updates.html" class="mobile-menu-sub">&#8627; Project Updates</a>
+    <a href="news-publications.html" class="mobile-menu-sub">&#8627; Publications</a>
     <div class="mobile-menu-divider"></div>
     <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div>
-    <a href="sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a>
-    <a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <a href="sponsors-current.html" class="mobile-menu-sub">&#8627; Current Sponsors</a>
+    <a href="sponsors-join.html" class="mobile-menu-sub">&#8627; For Potential Sponsors</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html" class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html"
+      class="mobile-menu-sub">&#8627; Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">&#8627; POSMq</a>
     <div class="mobile-menu-divider"></div>
     <a href="contact.html" class="mobile-menu-link">Contact</a>
     <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full"
@@ -99,23 +106,93 @@
       </div>
     </section>
 
-    <!-- GROUP PHOTO -->
-    <section class="section-sm" aria-label="Group photo">
+    <!-- GROUP PHOTO SLIDESHOW -->
+    <section class="section-sm" aria-label="Group photos slideshow">
       <div class="container">
-        <!-- ⚠️ REPLACE: swap this placeholder for your group photo -->
-        <div class="team-photo-hero reveal">
-          <div class="team-photo-placeholder">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
-              <rect width="56" height="56" rx="28" fill="rgba(168,85,247,0.12)" />
-              <path d="M16 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(168,85,247,0.5)" stroke-width="2"
-                stroke-linecap="round" />
-              <circle cx="28" cy="22" r="6" stroke="rgba(168,85,247,0.5)" stroke-width="2" />
+        <div class="team-slideshow reveal">
+          <div class="team-slideshow-wrapper">
+            <!-- Slide 1 -->
+            <div class="team-slide active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+              <div class="slide-image-wrapper">
+                <img src="assets/images/group_photo.png" alt="POSM Team Photo 1" class="slide-img" style="display:none;"
+                  onload="this.style.display='block'; this.nextElementSibling.style.display='none';" />
+                <div class="team-photo-placeholder">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                    <rect width="56" height="56" rx="28" fill="rgba(168,85,247,0.12)" />
+                    <path d="M16 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(168,85,247,0.5)"
+                      stroke-width="2" stroke-linecap="round" />
+                    <circle cx="28" cy="22" r="6" stroke="rgba(168,85,247,0.5)" stroke-width="2" />
+                  </svg>
+                  <p class="body-sm text-muted">Replace with: <code>assets/images/group_photo.jpg</code></p>
+                  <p class="body-sm text-muted" style="opacity:0.6">Recommended: 2400&times;900px, Slide 1</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="team-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+              <div class="slide-image-wrapper">
+                <img src="assets/images/group_photo_2.png" alt="POSM Team Photo 2" class="slide-img"
+                  style="display:none;"
+                  onload="this.style.display='block'; this.nextElementSibling.style.display='none';" />
+                <div class="team-photo-placeholder">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                    <rect width="56" height="56" rx="28" fill="rgba(168,85,247,0.12)" />
+                    <path d="M16 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(168,85,247,0.5)"
+                      stroke-width="2" stroke-linecap="round" />
+                    <circle cx="28" cy="22" r="6" stroke="rgba(168,85,247,0.5)" stroke-width="2" />
+                  </svg>
+                  <p class="body-sm text-muted">Replace with: <code>assets/images/group_photo_2.jpg</code></p>
+                  <p class="body-sm text-muted" style="opacity:0.6">Recommended: 2400&times;900px, Slide 2</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="team-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+              <div class="slide-image-wrapper">
+                <img src="assets/images/group_photo_3.png" alt="POSM Team Photo 3" class="slide-img"
+                  style="display:none;"
+                  onload="this.style.display='block'; this.nextElementSibling.style.display='none';" />
+                <div class="team-photo-placeholder">
+                  <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+                    <rect width="56" height="56" rx="28" fill="rgba(168,85,247,0.12)" />
+                    <path d="M16 38c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="rgba(168,85,247,0.5)"
+                      stroke-width="2" stroke-linecap="round" />
+                    <circle cx="28" cy="22" r="6" stroke="rgba(168,85,247,0.5)" stroke-width="2" />
+                  </svg>
+                  <p class="body-sm text-muted">Replace with: <code>assets/images/group_photo_3.jpg</code></p>
+                  <p class="body-sm text-muted" style="opacity:0.6">Recommended: 2400&times;900px, Slide 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <button class="slide-btn prev" aria-label="Previous slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
-            <p class="body-sm text-muted">Replace with: <code>assets/images/group_photo.jpg</code></p>
-            <p class="body-sm text-muted" style="opacity:0.6">Recommended: 2400×900px, team in lab or uniform setting
-            </p>
+          </button>
+          <button class="slide-btn next" aria-label="Next slide">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Indicators -->
+          <div class="slide-indicators">
+            <button class="slide-indicator active" aria-label="Go to slide 1"></button>
+            <button class="slide-indicator" aria-label="Go to slide 2"></button>
+            <button class="slide-indicator" aria-label="Go to slide 3"></button>
           </div>
         </div>
+        <p
+          style="text-align:center;margin-top:-0.5rem;font-size:1rem;font-family:var(--font-display);color:var(--muted);letter-spacing:0.06em;opacity:0.7;">
+          Images Courtesy of <a href="https://www.linkedin.com/in/elliehalverson/?isSelfProfile=false" target="_blank"
+            rel="noopener" style="color:var(--purple-bright);text-decoration:none;">Ellie Halverson</a></p>
       </div>
     </section>
 
@@ -128,13 +205,12 @@
           aria-label="View Prof. McLeod's profile">
           <div class="advisor-avatar">
             <img src="assets/images/headshots/mcleod.png" alt="Professor Alexander McLeod"
-              style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
               onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a0a2e,#0a1030)&quot;><span style=&quot;font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--purple-bright)&quot;>AM</span></div>'" />
           </div>
           <div>
             <div class="label mb-xs">Faculty Advisor</div>
             <h2 class="heading-sm" id="advisor-heading" style="margin-bottom:0.35rem">Professor Alexander McLeod</h2>
-            <p class="body-sm text-muted" style="margin-bottom:0.75rem">University of Minnesota � School of Physics
+            <p class="body-sm text-muted" style="margin-bottom:0.75rem">University of Minnesota &middot; School of Physics
               &amp; Astronomy</p>
             <span
               style="color:var(--purple-bright);font-size:0.85rem;font-family:var(--font-display);font-weight:600">View
@@ -152,12 +228,11 @@
 
         <div class="team-grid" id="team-grid" style="opacity:1">
 
-          <!-- MEMBER 1 — President -->
+          <!-- MEMBER 1 &mdash; President -->
           <a href="members/member-01.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 1 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-01.jpg" alt="Member 1"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-01.png" alt="Mahdi Khamseh"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>1</div>'" />
             </div>
             <div class="member-info">
@@ -166,12 +241,11 @@
             </div>
           </a>
 
-          <!-- MEMBER 2 — Vice President -->
+          <!-- MEMBER 2 &mdash; Vice President -->
           <a href="members/member-02.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 2 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-02.jpg" alt="Member 2"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-02.png" alt="Jack Jones"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>2</div>'" />
             </div>
             <div class="member-info">
@@ -184,8 +258,7 @@
           <a href="members/member-03.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 3 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-03.jpg" alt="Member 3"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-03.jpg" alt="Tyler Huver"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>3</div>'" />
             </div>
             <div class="member-info">
@@ -198,8 +271,7 @@
           <a href="members/member-04.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 4 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-04.jpg" alt="Member 4"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-04.png" alt="Shripad Patil"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>4</div>'" />
             </div>
             <div class="member-info">
@@ -212,12 +284,11 @@
           <a href="members/member-05.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 5 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-05.jpg" alt="Member 5"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-05.jpg" alt="Dany Iteriteka"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>5</div>'" />
             </div>
             <div class="member-info">
-              <div class="member-name">Alexander Weimer</div>
+              <div class="member-name">Dany Iteriteka</div>
               <div class="member-role">POSMq Lead</div>
             </div>
           </a>
@@ -226,12 +297,11 @@
           <a href="members/member-06.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 6 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-06.jpg" alt="Member 6"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-06.jpg" alt="Avery Lendermann"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>6</div>'" />
             </div>
             <div class="member-info">
-              <div class="member-name">Avery Lendermann</div>
+              <div class="member-name">Avery Lenderman</div>
               <div class="member-role">Researcher, Electronics</div>
             </div>
           </a>
@@ -240,8 +310,7 @@
           <a href="members/member-07.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 7 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-07.jpg" alt="Member 7"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-07.jpg" alt="Oscar"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>7</div>'" />
             </div>
             <div class="member-info">
@@ -254,8 +323,7 @@
           <a href="members/member-08.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 8 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-08.jpg" alt="Member 8"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-08.png" alt="Eli Fleischman"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>8</div>'" />
             </div>
             <div class="member-info">
@@ -268,8 +336,7 @@
           <a href="members/member-09.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 9 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-09.jpg" alt="Member 9"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-09.jpg" alt="Corbin Vaale"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>9</div>'" />
             </div>
             <div class="member-info">
@@ -282,8 +349,7 @@
           <a href="members/member-10.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 10 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-10.jpg" alt="Member 10"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-10.jpg" alt="Jason Van Donsel"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>10</div>'" />
             </div>
             <div class="member-info">
@@ -296,8 +362,7 @@
           <a href="members/member-11.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 11 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-11.jpg" alt="Member 11"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-11.jpg" alt="Naima Hughley"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>11</div>'" />
             </div>
             <div class="member-info">
@@ -310,13 +375,12 @@
           <a href="members/member-12.html" class="member-card"
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 12 profile">
             <div class="member-avatar">
-              <img src="assets/images/headshots/member-12.jpg" alt="Member 12"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
+              <img src="assets/images/headshots/member-12.png" alt="Vishrut Chawla"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>12</div>'" />
             </div>
             <div class="member-info">
-              <div class="member-name">Dany Iteriteka</div>
-              <div class="member-role">Researcher, Electronics and POSMq</div>
+              <div class="member-name">Vishrut Chawla</div>
+              <div class="member-role">Researcher, Photonics</div>
             </div>
           </a>
 
@@ -325,12 +389,11 @@
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 13 profile">
             <div class="member-avatar">
               <img src="assets/images/headshots/member-13.jpg" alt="Member 13"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>13</div>'" />
             </div>
             <div class="member-info">
-              <div class="member-name">Vishrut Chawla</div>
-              <div class="member-role">Researcher, Photonics</div>
+              <div class="member-name">{name}</div>
+              <div class="member-role">{role}</div>
             </div>
           </a>
 
@@ -339,7 +402,6 @@
             style="text-decoration:none;display:flex;flex-direction:column" aria-label="View Member 14 profile">
             <div class="member-avatar">
               <img src="assets/images/headshots/member-14.jpg" alt="Member 14"
-                style="width:100%;height:100%;object-fit:cover;border-radius:inherit"
                 onerror="this.outerHTML='<div class=&quot;avatar-placeholder&quot;>14</div>'" />
             </div>
             <div class="member-info">
@@ -350,11 +412,7 @@
 
         </div>
 
-        <p class="body-sm text-muted mt-xl" style="text-align:center;opacity:0.6">
-          ⚠️ <strong>Maintainers:</strong> To add a member, copy one <code>&lt;div class="member-card"&gt;</code>
-          block,
-          fill in the name/role/bio, and drop a headshot in <code>assets/images/headshots/</code>.
-        </p>
+
       </div>
     </section>
 
@@ -380,15 +438,15 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo" style="display:inline-flex">
-            <div class="nav-logo-mark" aria-hidden="true">P</div>POSM
+            <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
           </a>
-          <p>Student-led quantum optics and AMO hardware research · University of Minnesota · Advised by Prof.
-            Alexander
-            McLeod.</p>
+          <p>Student-led quantum optics and AMO hardware research &middot; University of Minnesota</p>
         </div>
         <div class="footer-col">
           <h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a
-            href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a href="contact.html">Contact</a>
+            href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a
+            href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
           <h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a>
@@ -399,13 +457,12 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025–2026 POSM Research Group · University of Minnesota</span>
-        <span>Advised by Prof. Alexander McLeod</span>
+        <span>&copy; 2025&ndash;2026 POSM Research Group &middot; University of Minnesota</span>
       </div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=1.1"></script>
 </body>
 
 </html>

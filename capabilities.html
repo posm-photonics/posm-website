@@ -1,192 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Capabilities — POSM Quantum Optics Research Group</title>
-  <meta name="description" content="POSM develops experimental hardware and software for quantum, photonic, RF, and sensing systems. Signal generation, frequency control, electro-optics, automated optomechanics, and model-based lab control." />
+  <meta name="description"
+    content="POSM develops experimental hardware and software for quantum, photonic, RF, and sensing systems. Signal generation, frequency control, electro-optics, automated optomechanics, and model-based lab control." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="POSM home"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a>
+      <a href="index.html" class="nav-logo" aria-label="POSM home">
+        <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+      </a>
       <ul class="nav-links" role="list">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
         <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem">Project Updates</a><a href="news-publications.html" role="menuitem">Publications</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem">Project Updates</a><a
+              href="news-publications.html" role="menuitem">Publications</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Sponsors<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a
+              href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
         </li>
         <li class="nav-item">
-          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a
+              href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
         </li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
       <div class="nav-cta">
         <a href="sponsors-join.html" class="btn btn-primary btn-sm">Support POSM</a>
-        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu"
+          aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a href="research.html" class="mobile-menu-link">Research</a>
-    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html" class="mobile-menu-sub">↳ Project Updates</a><a href="news-publications.html" class="mobile-menu-sub">↳ Publications</a>
+    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a
+      href="research.html" class="mobile-menu-link">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html"
+      class="mobile-menu-sub">↳ Project Updates</a><a href="news-publications.html" class="mobile-menu-sub">↳
+      Publications</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html" class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential Sponsors</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html"
+      class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For Potential
+      Sponsors</a>
     <div class="mobile-menu-divider"></div>
-    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html" class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
+    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html"
+      class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
     <div class="mobile-menu-divider"></div><a href="contact.html" class="mobile-menu-link">Contact</a>
-    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full" style="justify-content:center">Support POSM</a></div>
+    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full"
+        style="justify-content:center">Support POSM</a></div>
   </div>
 
   <main id="main-content">
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        HERO
        ═══════════════════════════════════════════════════ -->
-  <section class="page-hero" aria-labelledby="cap-page-heading">
-    <div class="container page-hero-content">
-      <div class="section-label reveal"><span class="label">What We Build</span></div>
-      <h1 class="display-xl reveal reveal-delay-1" id="cap-page-heading">Capabilities.</h1>
-      <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:640px;margin-top:var(--space-md)">
-        POSM develops experimental hardware and software for quantum, photonic, RF, and sensing systems. Our work focuses on the instrumentation layer between research ideas and working experiments: signal generation, frequency control, optomechanics, electro-optic interfaces, and model-based lab automation.
-      </p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════
-       INTRO BAND
-       ═══════════════════════════════════════════════════ -->
-  <section class="section-sm" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-surface)" aria-labelledby="intro-band-heading">
-    <div class="container">
-      <div style="max-width:720px;margin-inline:auto;text-align:center" class="reveal">
-        <h2 class="display-md mb-md" id="intro-band-heading">Bridging ideas and experiments.</h2>
-        <p class="body-lg text-muted">
-          Quantum and photonic experiments need more than theory and funding — they need reliable, well-designed instrumentation. POSM builds the hardware and software that sits between a research concept and a functioning experimental system.
+    <section class="page-hero" aria-labelledby="cap-page-heading">
+      <div class="container page-hero-content">
+        <div class="section-label reveal"><span class="label">What We Build</span></div>
+        <h1 class="display-xl reveal reveal-delay-1" id="cap-page-heading">Capabilities.</h1>
+        <p class="body-lg text-muted reveal reveal-delay-2" style="max-width:640px;margin-top:var(--space-md)">
+          POSM develops experimental hardware and software for quantum, photonic, RF, and sensing systems. Our work
+          focuses on the instrumentation layer between research ideas and working experiments: signal generation,
+          frequency control, optomechanics, electro-optic interfaces, and model-based lab automation.
         </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
+       INTRO BAND
+       ═══════════════════════════════════════════════════ -->
+    <section class="section-sm"
+      style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-surface)"
+      aria-labelledby="intro-band-heading">
+      <div class="container">
+        <div style="max-width:720px;margin-inline:auto;text-align:center" class="reveal">
+          <h2 class="display-md mb-md" id="intro-band-heading">Bridging ideas and experiments.</h2>
+          <p class="body-lg text-muted">
+            Quantum and photonic experiments need more than theory and funding — they need reliable, well-designed
+            instrumentation. POSM builds the hardware and software that sits between a research concept and a
+            functioning experimental system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
        CAPABILITY CARDS
        ✏️  Edit the card titles and descriptions in the
            grid below. Each .cap-card is one entry.
        ═══════════════════════════════════════════════════ -->
-  <section class="section" aria-labelledby="cap-grid-heading">
-    <div class="container">
-      <div class="section-label reveal"><span class="label">Portfolio</span></div>
-      <h2 class="display-md mb-xl reveal reveal-delay-1" id="cap-grid-heading">Capability areas.</h2>
+    <section class="section" aria-labelledby="cap-grid-heading">
+      <div class="container">
+        <div class="section-label reveal"><span class="label">Portfolio</span></div>
+        <h2 class="display-md mb-xl reveal reveal-delay-1" id="cap-grid-heading">Capability areas.</h2>
 
-      <div class="cap-grid reveal-stagger" id="cap-grid">
+        <div class="cap-grid reveal-stagger" id="cap-grid">
 
-        <!-- ✏️ CARD A: Signal Generation Platforms -->
-        <div class="cap-card" id="cap-signal">
-          <div class="cap-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h2l3-7 4 14 3-7h2"/><circle cx="20" cy="12" r="2"/></svg>
+          <!-- ✏️ CARD A: Signal Generation Platforms -->
+          <div class="cap-card" id="cap-signal">
+            <div class="cap-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 12h2l3-7 4 14 3-7h2" />
+                <circle cx="20" cy="12" r="2" />
+              </svg>
+            </div>
+            <h3 class="cap-card-title">Signal Generation Platforms</h3>
+            <p class="cap-card-desc">Modular mixed-signal and RF boards for waveform generation, routing, filtering, and
+              experiment control. Designed to support flexible laboratory testbeds without locking projects into one
+              fixed architecture.</p>
           </div>
-          <h3 class="cap-card-title">Signal Generation Platforms</h3>
-          <p class="cap-card-desc">Modular mixed-signal and RF boards for waveform generation, routing, filtering, and experiment control. Designed to support flexible laboratory testbeds without locking projects into one fixed architecture.</p>
-        </div>
 
-        <!-- ✏️ CARD B: Frequency-Control Hardware -->
-        <div class="cap-card" id="cap-freq">
-          <div class="cap-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4m-7.07-15.07l2.83 2.83m8.49 8.49l2.83 2.83M1 12h4m14 0h4M4.93 19.07l2.83-2.83m8.49-8.49l2.83-2.83"/></svg>
+          <!-- ✏️ CARD B: Frequency-Control Hardware -->
+          <div class="cap-card" id="cap-freq">
+            <div class="cap-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 1v4m0 14v4m-7.07-15.07l2.83 2.83m8.49 8.49l2.83 2.83M1 12h4m14 0h4M4.93 19.07l2.83-2.83m8.49-8.49l2.83-2.83" />
+              </svg>
+            </div>
+            <h3 class="cap-card-title">Frequency-Control Hardware</h3>
+            <p class="cap-card-desc">Timing, modulation, tunability, laser-frequency shifting, and experiment-specific
+              signal conditioning hardware. Built for research workflows where frequency agility and clean control
+              signals matter.</p>
           </div>
-          <h3 class="cap-card-title">Frequency-Control Hardware</h3>
-          <p class="cap-card-desc">Timing, modulation, tunability, laser-frequency shifting, and experiment-specific signal conditioning hardware. Built for research workflows where frequency agility and clean control signals matter.</p>
-        </div>
 
-        <!-- ✏️ CARD C: Electro-Optic Assemblies -->
-        <div class="cap-card" id="cap-eo">
-          <div class="cap-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <!-- ✏️ CARD C: Electro-Optic Assemblies -->
+          <div class="cap-card" id="cap-eo">
+            <div class="cap-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <h3 class="cap-card-title">Electro-Optic Assemblies</h3>
+            <p class="cap-card-desc">Compact modulator assemblies, driver interfaces, and optomechanical support
+              hardware for photonic and atomic experiments. Focused on practical integration between optical components,
+              electronics, and mechanical constraints.</p>
           </div>
-          <h3 class="cap-card-title">Electro-Optic Assemblies</h3>
-          <p class="cap-card-desc">Compact modulator assemblies, driver interfaces, and optomechanical support hardware for photonic and atomic experiments. Focused on practical integration between optical components, electronics, and mechanical constraints.</p>
-        </div>
 
-        <!-- ✏️ CARD D: Automated Optomechanics -->
-        <div class="cap-card" id="cap-opto">
-          <div class="cap-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <!-- ✏️ CARD D: Automated Optomechanics -->
+          <div class="cap-card" id="cap-opto">
+            <div class="cap-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <h3 class="cap-card-title">Automated Optomechanics</h3>
+            <p class="cap-card-desc">Motorized rotation mounts, polarization and power-control modules, optical
+              monitoring taps, and compact beam-control assemblies. Developed to make optical systems easier to tune,
+              monitor, and repeat.</p>
           </div>
-          <h3 class="cap-card-title">Automated Optomechanics</h3>
-          <p class="cap-card-desc">Motorized rotation mounts, polarization and power-control modules, optical monitoring taps, and compact beam-control assemblies. Developed to make optical systems easier to tune, monitor, and repeat.</p>
-        </div>
 
-        <!-- ✏️ CARD E: POSMq Lab Control -->
-        <div class="cap-card cap-card-highlight" id="cap-posmq">
-          <div class="cap-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          <!-- ✏️ CARD E: POSMq Lab Control -->
+          <div class="cap-card cap-card-highlight" id="cap-posmq">
+            <div class="cap-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8m-4-4v4" />
+              </svg>
+            </div>
+            <h3 class="cap-card-title">POSMq Lab Control</h3>
+            <p class="cap-card-desc">POSM's developing model-based experimental-control platform connecting hardware
+              settings, sensor streams, and digital models. Intended to support tuning, drift detection, system
+              monitoring, and automated setup decisions.</p>
           </div>
-          <h3 class="cap-card-title">POSMq Lab Control</h3>
-          <p class="cap-card-desc">POSM's developing model-based experimental-control platform connecting hardware settings, sensor streams, and digital models. Intended to support tuning, drift detection, system monitoring, and automated setup decisions.</p>
-        </div>
 
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════════════
+    <!-- ═══════════════════════════════════════════════════
        POSMq EARLY ACCESS
        ═══════════════════════════════════════════════════ -->
-  <section class="section" style="background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-labelledby="posmq-ea-heading">
-    <div class="container">
-      <div class="cap-early-access reveal">
-        <div class="cap-ea-content">
-          <div class="section-label"><span class="label">Early Access</span></div>
-          <h2 class="display-md mb-md" id="posmq-ea-heading">POSMq Early Access</h2>
-          <p class="body-lg text-muted mb-lg" style="max-width:560px">
-            POSMq is being developed as a model-based lab-control layer for experimental physics systems. We are interested in conversations with research groups, laboratories, and technical partners who may want to pilot future tools for system monitoring, tuning support, drift detection, and automated setup decisions.
-          </p>
-          <a href="contact.html" class="btn btn-primary">Discuss Early Access<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-left:0.25rem"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-        <div class="cap-ea-visual" aria-hidden="true">
-          <div class="cap-ea-ring"></div>
-          <div class="cap-ea-ring cap-ea-ring-2"></div>
-          <div class="cap-ea-dot"></div>
+    <section class="section"
+      style="background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)"
+      aria-labelledby="posmq-ea-heading">
+      <div class="container">
+        <div class="cap-early-access reveal">
+          <div class="cap-ea-content">
+            <div class="section-label"><span class="label">Early Access</span></div>
+            <h2 class="display-md mb-md" id="posmq-ea-heading">POSMq Early Access</h2>
+            <p class="body-lg text-muted mb-lg" style="max-width:560px">
+              POSMq is being developed as a model-based lab-control layer for experimental physics systems. We are
+              interested in conversations with research groups, laboratories, and technical partners who may want to
+              pilot future tools for system monitoring, tuning support, drift detection, and automated setup decisions.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Discuss Early Access<svg width="16" height="16"
+                viewBox="0 0 16 16" fill="none" style="margin-left:0.25rem">
+                <path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg></a>
+          </div>
+          <div class="cap-ea-visual" aria-hidden="true">
+            <div class="cap-ea-ring"></div>
+            <div class="cap-ea-ring cap-ea-ring-2"></div>
+            <div class="cap-ea-dot"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="sponsor-cta" style="padding-block:var(--space-xl)" aria-labelledby="cap-cta-heading">
-    <div class="container">
-      <div class="reveal" style="max-width:540px;margin-inline:auto">
-        <h2 class="display-md mb-md" id="cap-cta-heading">Questions?</h2>
-        <p class="body-lg text-muted mb-lg">Reach out to discuss research instrumentation, collaboration, or early-access interest.</p>
-        <a href="contact.html" class="btn btn-primary">Contact POSM</a>
+    <!-- CTA -->
+    <section class="sponsor-cta" style="padding-block:var(--space-xl)" aria-labelledby="cap-cta-heading">
+      <div class="container">
+        <div class="reveal" style="max-width:540px;margin-inline:auto">
+          <h2 class="display-md mb-md" id="cap-cta-heading">Questions?</h2>
+          <p class="body-lg text-muted mb-lg">Reach out to discuss research instrumentation, collaboration, or
+            early-access interest.</p>
+          <a href="contact.html" class="btn btn-primary">Contact POSM</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </main>
 
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex"><div class="nav-logo-mark" aria-hidden="true">P</div>POSM</a><p>Student-led quantum optics and AMO hardware research · University of Minnesota · Advised by Prof. Alexander McLeod.</p></div>
-        <div class="footer-col"><h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a href="contact.html">Contact</a></div>
-        <div class="footer-col"><h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a></div>
-        <div class="footer-col"><h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a Sponsor</a></div>
+        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex">
+            <div class="nav-logo-mark" aria-hidden="true"></div>
+POSM
+          </a>
+          <p>Student-led quantum optics and AMO hardware research · University of Minnesota</p>
+        </div>
+        <div class="footer-col">
+          <h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a
+            href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a
+            href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a
+            Sponsor</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span><span>Advised by Prof. Alexander McLeod</span></div>
+      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span></div>
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
