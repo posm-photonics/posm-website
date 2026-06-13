@@ -202,10 +202,7 @@ POSM
                 <textarea class="form-textarea" id="contact-message" name="message"
                   placeholder="Tell us what you are interested in"></textarea>
               </div>
-              <!-- reCAPTCHA widget: site key injected from config.js -->
-              <div class="form-group" style="display:flex;justify-content:center">
-                <div id="recaptcha-widget"></div>
-              </div>
+
               <button type="submit" class="btn btn-primary w-full" style="justify-content:center"
                 id="contact-submit-btn">
                 Send Message
@@ -270,25 +267,22 @@ POSM
     Form Submitted Successfully. We will get back to you within 24 hours!
   </div>
 
-  <!-- Config: API keys (gitignored) — MUST load first -->
+  <!-- Config: API keys (gitignored) -->
   <script src="assets/js/config.js"></script>
 
-  <!-- reCAPTCHA callback — MUST be global before the API loads -->
+  <!-- Google reCAPTCHA v3 (invisible, score-based) -->
   <script>
-    var recaptchaWidgetId = null;
-    function onRecaptchaLoad() {
-      var siteKey = (typeof POSM_CONFIG !== 'undefined') ? POSM_CONFIG.RECAPTCHA_SITE_KEY : '';
-      if (siteKey && document.getElementById('recaptcha-widget')) {
-        recaptchaWidgetId = grecaptcha.render('recaptcha-widget', {
-          sitekey: siteKey,
-          theme: 'dark'
-        });
+    // Load reCAPTCHA v3 API dynamically with site key from config
+    (function () {
+      if (typeof POSM_CONFIG === 'undefined' || !POSM_CONFIG.RECAPTCHA_SITE_KEY) {
+        console.warn('POSM config not found. Copy config.example.js to config.js and add your keys.');
+        return;
       }
-    }
+      var s = document.createElement('script');
+      s.src = 'https://www.google.com/recaptcha/api.js?render=' + POSM_CONFIG.RECAPTCHA_SITE_KEY;
+      document.head.appendChild(s);
+    })();
   </script>
-
-  <!-- Google reCAPTCHA v2 API (explicit render) -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 
   <!-- Contact form handler -->
   <script>
@@ -301,61 +295,60 @@ POSM
       if (typeof POSM_CONFIG !== 'undefined') {
         var keyInput = document.getElementById('sf-access-key');
         if (keyInput) keyInput.value = POSM_CONFIG.STATICFORMS_ACCESS_KEY || '';
-      } else {
-        console.warn('POSM config not found. Copy config.example.js to config.js and add your keys.');
       }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        // Verify reCAPTCHA if loaded
-        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
-          var captchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
-          if (!captchaResponse) {
-            var widget = document.getElementById('recaptcha-widget');
-            if (widget) {
-              widget.style.outline = '2px solid #ef4444';
-              widget.style.borderRadius = '4px';
-              setTimeout(function () { widget.style.outline = 'none'; }, 2000);
-            }
-            return;
-          }
-        }
 
         var btn = form.querySelector('[type="submit"]');
         var originalHTML = btn.innerHTML;
         btn.innerHTML = 'Sending\u2026';
         btn.disabled = true;
 
-        var payload = {};
-        var fd = new FormData(form);
-        fd.forEach(function (val, key) { payload[key] = val; });
-        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
-          payload['g-recaptcha-response'] = grecaptcha.getResponse(recaptchaWidgetId);
+        // Get reCAPTCHA v3 token, then submit
+        var siteKey = (typeof POSM_CONFIG !== 'undefined') ? POSM_CONFIG.RECAPTCHA_SITE_KEY : '';
+
+        function doSubmit(recaptchaToken) {
+          var payload = {};
+          var fd = new FormData(form);
+          fd.forEach(function (val, key) { payload[key] = val; });
+          if (recaptchaToken) {
+            payload['g-recaptcha-response'] = recaptchaToken;
+          }
+
+          fetch(form.action, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          }).catch(function () {});
+
+          form.reset();
+          btn.innerHTML = originalHTML;
+          btn.disabled = false;
+
+          toast.style.opacity = '1';
+          toast.style.transform = 'translateX(-50%) translateY(0)';
+          toast.style.pointerEvents = 'auto';
+
+          setTimeout(function () {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(150%)';
+            toast.style.pointerEvents = 'none';
+          }, 5000);
         }
 
-        fetch(form.action, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).catch(function () {});
-
-        form.reset();
-        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
-          grecaptcha.reset(recaptchaWidgetId);
+        // Execute reCAPTCHA v3 if available, otherwise submit without it
+        if (typeof grecaptcha !== 'undefined' && siteKey) {
+          grecaptcha.ready(function () {
+            grecaptcha.execute(siteKey, { action: 'contact_submit' }).then(function (token) {
+              doSubmit(token);
+            }).catch(function () {
+              doSubmit('');
+            });
+          });
+        } else {
+          doSubmit('');
         }
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-
-        toast.style.opacity = '1';
-        toast.style.transform = 'translateX(-50%) translateY(0)';
-        toast.style.pointerEvents = 'auto';
-
-        setTimeout(function () {
-          toast.style.opacity = '0';
-          toast.style.transform = 'translateX(-50%) translateY(150%)';
-          toast.style.pointerEvents = 'none';
-        }, 5000);
       });
     })();
   </script>

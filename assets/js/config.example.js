@@ -10,6 +10,6 @@ const POSM_CONFIG = {
   // StaticForms access key — get yours at https://www.staticforms.xyz
   STATICFORMS_ACCESS_KEY: "YOUR_STATICFORMS_ACCESS_KEY_HERE",
 
-  // Google reCAPTCHA v2 site key — register at https://www.google.com/recaptcha/admin
+  // Google reCAPTCHA v3 site key — register at https://www.google.com/recaptcha/admin
   RECAPTCHA_SITE_KEY: "YOUR_RECAPTCHA_SITE_KEY_HERE",
 };
