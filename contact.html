@@ -13,6 +13,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -201,6 +203,10 @@ POSM
                 <textarea class="form-textarea" id="contact-message" name="message"
                   placeholder="Tell us what you are interested in"></textarea>
               </div>
+              <!-- reCAPTCHA widget: Replace data-sitekey with your real key from https://www.google.com/recaptcha/admin -->
+              <div class="form-group" style="display:flex;justify-content:center">
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+              </div>
               <button type="submit" class="btn btn-primary w-full" style="justify-content:center"
                 id="contact-submit-btn">
                 Send Message
@@ -274,6 +280,19 @@ POSM
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Verify reCAPTCHA
+        var captchaResponse = grecaptcha.getResponse();
+        if (!captchaResponse) {
+          // Briefly flash the reCAPTCHA border to draw attention
+          var widget = document.querySelector('.g-recaptcha');
+          if (widget) {
+            widget.style.outline = '2px solid #ef4444';
+            widget.style.borderRadius = '4px';
+            setTimeout(function() { widget.style.outline = 'none'; }, 2000);
+          }
+          return;
+        }
+
         var btn = form.querySelector('[type="submit"]');
         var originalHTML = btn.innerHTML;
         btn.innerHTML = 'Sending\u2026';
@@ -283,6 +302,7 @@ POSM
         var payload = {};
         var fd = new FormData(form);
         fd.forEach(function (val, key) { payload[key] = val; });
+        payload['g-recaptcha-response'] = captchaResponse;
 
         // Fire and forget — send data in background
         try {
@@ -293,8 +313,9 @@ POSM
           }).catch(function () {});
         } catch (err) {}
 
-        // Immediately reset form and show toast
+        // Immediately reset form, reset captcha, and show toast
         form.reset();
+        grecaptcha.reset();
         btn.innerHTML = originalHTML;
         btn.disabled = false;
 
