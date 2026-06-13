@@ -1,3 +1,31 @@
+# ── Sensitive config (API keys, tokens) ──
+assets/js/config.js
+
+# ── OS generated files ──
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Editor / IDE files ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Node (if ever needed) ──
+node_modules/
+npm-debug.log*
+
+# ── Temp & build artifacts ──
+*.tmp
+*.bak
+*.orig
+
+# ── Python (used for image processing scripts) ──
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

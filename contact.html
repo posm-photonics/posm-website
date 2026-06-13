@@ -13,8 +13,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Google reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Google reCAPTCHA v2 (explicit render — key injected from config.js) -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 </head>
 
 <body>
@@ -159,10 +159,10 @@ POSM
           <!-- RIGHT: Contact form -->
           <div class="reveal">
             <div class="section-label mb-md"><span class="label">Send a Message</span></div>
-            <!-- Static Forms: replace YOUR_ACCESS_KEY with your key from https://www.staticforms.xyz -->
+            <!-- Keys loaded from assets/js/config.js (gitignored) -->
             <form class="contact-form" id="contact-form" action="https://api.staticforms.xyz/submit" method="POST"
               novalidate aria-label="Contact form">
-              <input type="hidden" name="accessKey" value="REDACTED_KEY">
+              <input type="hidden" name="accessKey" id="sf-access-key" value="">
               <input type="hidden" name="redirectTo" value="">
               <input type="hidden" name="subject" value="New POSM Contact Form Submission">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
@@ -203,9 +203,9 @@ POSM
                 <textarea class="form-textarea" id="contact-message" name="message"
                   placeholder="Tell us what you are interested in"></textarea>
               </div>
-              <!-- reCAPTCHA widget: Replace data-sitekey with your real key from https://www.google.com/recaptcha/admin -->
+              <!-- reCAPTCHA widget: site key injected from config.js -->
               <div class="form-group" style="display:flex;justify-content:center">
-                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="dark"></div>
+                <div id="recaptcha-widget"></div>
               </div>
               <button type="submit" class="btn btn-primary w-full" style="justify-content:center"
                 id="contact-submit-btn">
@@ -271,11 +271,31 @@ POSM
     Form Submitted Successfully. We will get back to you within 24 hours!
   </div>
 
+  <!-- Config: API keys (gitignored) -->
+  <script src="assets/js/config.js"></script>
   <script>
     (function () {
       var form = document.getElementById('contact-form');
       var toast = document.getElementById('form-toast');
       if (!form || !toast) return;
+
+      // Inject StaticForms key from config.js
+      if (typeof POSM_CONFIG !== 'undefined') {
+        document.getElementById('sf-access-key').value = POSM_CONFIG.STATICFORMS_ACCESS_KEY || '';
+      } else {
+        console.warn('POSM config not found. Copy config.example.js to config.js and add your keys.');
+      }
+
+      // reCAPTCHA explicit render callback
+      window.onRecaptchaLoad = function () {
+        var siteKey = (typeof POSM_CONFIG !== 'undefined') ? POSM_CONFIG.RECAPTCHA_SITE_KEY : '';
+        if (siteKey) {
+          grecaptcha.render('recaptcha-widget', {
+            sitekey: siteKey,
+            theme: 'dark'
+          });
+        }
+      };
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
