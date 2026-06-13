@@ -13,8 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Google reCAPTCHA v2 (explicit render — key injected from config.js) -->
-  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+
 </head>
 
 <body>
@@ -271,46 +270,56 @@ POSM
     Form Submitted Successfully. We will get back to you within 24 hours!
   </div>
 
-  <!-- Config: API keys (gitignored) -->
+  <!-- Config: API keys (gitignored) — MUST load first -->
   <script src="assets/js/config.js"></script>
+
+  <!-- reCAPTCHA callback — MUST be global before the API loads -->
+  <script>
+    var recaptchaWidgetId = null;
+    function onRecaptchaLoad() {
+      var siteKey = (typeof POSM_CONFIG !== 'undefined') ? POSM_CONFIG.RECAPTCHA_SITE_KEY : '';
+      if (siteKey && document.getElementById('recaptcha-widget')) {
+        recaptchaWidgetId = grecaptcha.render('recaptcha-widget', {
+          sitekey: siteKey,
+          theme: 'dark'
+        });
+      }
+    }
+  </script>
+
+  <!-- Google reCAPTCHA v2 API (explicit render) -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+
+  <!-- Contact form handler -->
   <script>
     (function () {
       var form = document.getElementById('contact-form');
       var toast = document.getElementById('form-toast');
       if (!form || !toast) return;
 
-      // Inject StaticForms key from config.js
+      // Inject StaticForms key
       if (typeof POSM_CONFIG !== 'undefined') {
-        document.getElementById('sf-access-key').value = POSM_CONFIG.STATICFORMS_ACCESS_KEY || '';
+        var keyInput = document.getElementById('sf-access-key');
+        if (keyInput) keyInput.value = POSM_CONFIG.STATICFORMS_ACCESS_KEY || '';
       } else {
         console.warn('POSM config not found. Copy config.example.js to config.js and add your keys.');
       }
 
-      // reCAPTCHA explicit render callback
-      window.onRecaptchaLoad = function () {
-        var siteKey = (typeof POSM_CONFIG !== 'undefined') ? POSM_CONFIG.RECAPTCHA_SITE_KEY : '';
-        if (siteKey) {
-          grecaptcha.render('recaptcha-widget', {
-            sitekey: siteKey,
-            theme: 'dark'
-          });
-        }
-      };
-
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Verify reCAPTCHA
-        var captchaResponse = grecaptcha.getResponse();
-        if (!captchaResponse) {
-          // Briefly flash the reCAPTCHA border to draw attention
-          var widget = document.querySelector('.g-recaptcha');
-          if (widget) {
-            widget.style.outline = '2px solid #ef4444';
-            widget.style.borderRadius = '4px';
-            setTimeout(function() { widget.style.outline = 'none'; }, 2000);
+        // Verify reCAPTCHA if loaded
+        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
+          var captchaResponse = grecaptcha.getResponse(recaptchaWidgetId);
+          if (!captchaResponse) {
+            var widget = document.getElementById('recaptcha-widget');
+            if (widget) {
+              widget.style.outline = '2px solid #ef4444';
+              widget.style.borderRadius = '4px';
+              setTimeout(function () { widget.style.outline = 'none'; }, 2000);
+            }
+            return;
           }
-          return;
         }
 
         var btn = form.querySelector('[type="submit"]');
@@ -318,33 +327,30 @@ POSM
         btn.innerHTML = 'Sending\u2026';
         btn.disabled = true;
 
-        // Collect form data as JSON
         var payload = {};
         var fd = new FormData(form);
         fd.forEach(function (val, key) { payload[key] = val; });
-        payload['g-recaptcha-response'] = captchaResponse;
+        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
+          payload['g-recaptcha-response'] = grecaptcha.getResponse(recaptchaWidgetId);
+        }
 
-        // Fire and forget — send data in background
-        try {
-          fetch(form.action, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          }).catch(function () {});
-        } catch (err) {}
+        fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function () {});
 
-        // Immediately reset form, reset captcha, and show toast
         form.reset();
-        grecaptcha.reset();
+        if (typeof grecaptcha !== 'undefined' && recaptchaWidgetId !== null) {
+          grecaptcha.reset(recaptchaWidgetId);
+        }
         btn.innerHTML = originalHTML;
         btn.disabled = false;
 
-        // Show toast via direct inline style
         toast.style.opacity = '1';
         toast.style.transform = 'translateX(-50%) translateY(0)';
         toast.style.pointerEvents = 'auto';
 
-        // Hide toast after 5 seconds
         setTimeout(function () {
           toast.style.opacity = '0';
           toast.style.transform = 'translateX(-50%) translateY(150%)';
