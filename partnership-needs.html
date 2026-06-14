@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equipment & Partnership Needs — POSM Quantum Optics Research Group</title>
+  <meta name="description"
+    content="Detailed equipment, component, fabrication, software, and support needs for POSM quantum optics and AMO hardware projects. Review technical requirements and discuss contributions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="POSM home">
+        <div class="nav-logo-mark" aria-hidden="true"></div>
+        POSM
+      </a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">News<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="news-updates.html" role="menuitem">Project Updates</a><a
+              href="news-publications.html" role="menuitem">Publications</a></div>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true" data-active="true">Sponsors<svg
+              viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="sponsors-current.html" role="menuitem">Current Sponsors</a><a
+              href="sponsors-join.html" role="menuitem">For Potential Sponsors</a></div>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" tabindex="0" role="button" aria-haspopup="true">Capabilities<svg viewBox="0 0 16 16"
+              fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span>
+          <div class="nav-dropdown" role="menu"><a href="capabilities/hardware.html" role="menuitem">Hardware</a><a
+              href="capabilities/posmq.html" role="menuitem">POSMq</a></div>
+        </li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="sponsors-join.html" class="btn btn-primary btn-sm">Support POSM</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Toggle mobile menu"
+          aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu-link">Home</a><a href="team.html" class="mobile-menu-link">Team</a><a
+      href="research.html" class="mobile-menu-link">Research</a>
+    <div class="mobile-menu-link" style="color:var(--white)">News</div><a href="news-updates.html"
+      class="mobile-menu-sub">↳ Project Updates</a><a href="news-publications.html" class="mobile-menu-sub">↳
+      Publications</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-menu-link" style="color:var(--white)">Sponsors</div><a href="sponsors-current.html"
+      class="mobile-menu-sub">↳ Current Sponsors</a><a href="sponsors-join.html" class="mobile-menu-sub">↳ For
+      Potential Sponsors</a>
+    <div class="mobile-menu-divider"></div>
+    <div class="mobile-menu-link" style="color:var(--white)">Capabilities</div><a href="capabilities/hardware.html"
+      class="mobile-menu-sub">↳ Hardware</a><a href="capabilities/posmq.html" class="mobile-menu-sub">↳ POSMq</a>
+    <div class="mobile-menu-divider"></div><a href="contact.html" class="mobile-menu-link">Contact</a>
+    <div style="margin-top:1.5rem"><a href="sponsors-join.html" class="btn btn-primary w-full"
+        style="justify-content:center">Support POSM</a></div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ═══ HERO ═══ -->
+    <section class="page-hero pn-hero" aria-labelledby="pn-page-heading">
+      <div class="container page-hero-content">
+        <div class="section-label reveal"><span class="label">Current Needs</span></div>
+        <h1 class="display-xl reveal reveal-delay-1" id="pn-page-heading">Equipment &amp; Partnership Needs.</h1>
+        <p class="body-lg pn-body reveal reveal-delay-2" style="max-width:660px;margin-top:var(--space-md)">
+          This page identifies equipment, components, technical services, and other resources that would immediately
+          support active POSM projects. Exact models are listed only where compatibility requires them. Comparable
+          equipment and alternative technical solutions are welcome.
+        </p>
+        <div class="pn-meta reveal reveal-delay-2" style="margin-top:var(--space-sm)">Last updated: June 2026</div>
+        <div class="reveal reveal-delay-3"
+          style="margin-top:var(--space-lg);display:flex;gap:1rem;flex-wrap:wrap;align-items:center">
+          <a href="sponsors-join.html#partnership-form" class="btn btn-primary">Discuss a Contribution →</a>
+          <a href="sponsors-join.html#opportunities-heading" class="btn btn-ghost">Return to Partnership
+            Opportunities</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vendor-neutral notice -->
+    <div class="pn-notice-strip">
+      <div class="container">
+        <div class="pn-notice reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="16" x2="12" y2="12" />
+            <line x1="12" y1="8" x2="12.01" y2="8" />
+          </svg>
+          <p>Comparable alternatives are welcome. POSM can evaluate whether equipment, components, or services outside
+            the listed examples are compatible with our projects.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section navigation -->
+    <nav class="pn-section-nav" aria-label="Needs categories">
+      <div class="container">
+        <div class="pn-nav-row" id="pn-nav">
+          <a href="#equipment-components" class="pn-nav-link">Equipment &amp; Components</a>
+          <a href="#test-measurement" class="pn-nav-link">Test &amp; Measurement</a>
+          <a href="#software-expertise-funding" class="pn-nav-link">Software &amp; Expertise</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══ SECTION 1: EQUIPMENT AND COMPONENTS ═══ -->
+    <section class="pn-section" id="equipment-components" aria-labelledby="sec-equipment-heading">
+      <div class="container">
+        <div class="section-label reveal"><span class="label">Equipment &amp; Components</span></div>
+        <h2 class="display-md reveal reveal-delay-1" id="sec-equipment-heading" style="margin-bottom:var(--space-lg)">
+          Equipment and Components</h2>
+
+        <div class="pn-needs-grid reveal-stagger">
+
+          <!-- Optical components -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Optical Components and Mounts</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Specify exact wavelengths, coating requirements, and mount thread sizes from active project BOMs -->
+                <p>Broadband dielectric mirrors, beam splitters (free space), waveplates, lenses -- all ideally 1/2"
+                  intended for use at NIR wavelengths. Fiber beamsplitters (in various ratios), fiber isolators (any
+                  isolation), single-mode fiber path cables (various lengths), collimators, fiber switches -- all fiber
+                  components ideally single-mode PM. </p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Thorlabs, Newport, Edmund Optics, OptoSigma, or other optics meeting the stated requirements.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, surplus, or used in good optical condition (clean coatings, undamaged substrates).</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Supports laser-stabilization, spectroscopy, and automated optomechanics experiments.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="Optical Components and Mounts" data-category="equipment">Discuss This Need →</a>
+          </div>
+
+          <!-- Vacuum components -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Vacuum Components and Fittings</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Specify exact CF flange sizes, viewport requirements, and feedthrough types from vacuum system design -->
+                <p>UHV flanges, electrical feedthroughs (less than 10 Amps), blank flanges, gaskets, pirani/cold-cathode
+                  gauges, ion pumps (between 10-40 L/s, with cable and controller), residual gas analyzers (with cable
+                  and controller) and fittings for the cold-atom vacuum platform -- ideally CF 2.75 or similar for all
+                  components.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Required interface</span>
+                <p>CF standard. Exact sizes depend on the chamber design in progress.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Kurt J. Lesker, MDC, Nor-Cal Products, Pfeiffer, or other UHV-rated manufacturers.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, surplus, or used with clean sealing surfaces. UHV-compatible cleaning required.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Directly supports construction of POSM's cold-atom research vacuum system.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="Vacuum Components and Fittings" data-category="equipment">Discuss This Need →</a>
+          </div>
+
+          <!-- RF hardware -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">RF and Microwave Components</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Specify frequency ranges, connector types, and power levels from RF project specifications -->
+                <p>SMA/BNC connectors, coaxial cables, RF amplifiers, mixers, attenuators, splitters, and bias tees
+                  compatible with the RF modulation and signal-generation systems.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Mini-Circuits, Pasternack, Fairview Microwave, or comparable RF component suppliers.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, surplus, or used with verified electrical performance.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Supports laser modulation, frequency-control, and signal-conditioning hardware across multiple
+                  projects.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="RF and Microwave Components"
+              data-category="equipment">Discuss This Need →</a>
+          </div>
+
+          <!-- Electronic components -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Electronic Components and Development Boards</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <p>FPGA development boards, microcontroller modules, DACs, ADCs, op-amps, voltage regulators, power
+                  components, connectors, and passive components for custom electronics design.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <!-- TODO: Specify exact FPGA family (Xilinx/AMD, Intel/Altera, Lattice) used in current control system designs -->
+                <p>Xilinx/AMD or Lattice FPGA development kits, STM32 or RP2040 microcontroller boards, Texas
+                  Instruments or Analog Devices signal-chain ICs.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New or surplus. Development boards should be functional with documentation.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Supports POSM's custom PCB designs for experiment control, signal generation, and data acquisition.
+                </p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="Electronic Components and Development Boards" data-category="equipment">Discuss This Need →</a>
+          </div>
+
+          <!-- Photonic components -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Photonic and Fiber-Optic Components</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Specify fiber types (SM, PM), wavelengths, and connector standards from photonics project specifications -->
+                <p>Acousto-optic modulators, electro-optic modulators, and photodetectors.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Thorlabs, Gooch &amp; Housego, iXblue/Exail, or comparable photonic component suppliers.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, demo units, or used with verified optical performance.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Supports integrated photonics experiments and laser-control infrastructure.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="Photonic and Fiber-Optic Components" data-category="equipment">Discuss This Need →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SECTION 2: TEST AND MEASUREMENT ═══ -->
+    <section class="pn-section pn-section-alt" id="test-measurement" aria-labelledby="sec-test-heading">
+      <div class="container">
+        <div class="section-label reveal"><span class="label">Test &amp; Measurement</span></div>
+        <h2 class="display-md reveal reveal-delay-1" id="sec-test-heading" style="margin-bottom:var(--space-lg)">Test
+          and Measurement</h2>
+
+        <div class="pn-needs-grid reveal-stagger">
+
+          <!-- Oscilloscope -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Digital Oscilloscope</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Confirm minimum bandwidth, sample rate, and channel count from project leads -->
+                <p>Four-channel digital oscilloscope with bandwidth sufficient for mixed-signal and RF debugging.
+                  Decoding and protocol analysis capabilities preferred.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Keysight, Tektronix, Rohde &amp; Schwarz, Rigol, Siglent, or other equipment meeting the stated
+                  requirements.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, refurbished, demo unit, or loaner with current calibration preferred.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Required for debugging custom PCBs, verifying signal integrity, and characterizing analog and digital
+                  circuits across all active hardware programs.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="Digital Oscilloscope"
+              data-category="test-measurement">Discuss This Need →</a>
+          </div>
+
+          <!-- VNA -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Vector Network Analyzer</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <p>Two-port S-parameter measurement, calibration-kit support, and operation through 3 GHz.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Keysight, Rohde &amp; Schwarz, Anritsu, Copper Mountain, or other equipment meeting the stated
+                  requirements.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, refurbished, demo unit, or loaner.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Characterization of RF filters, impedance matching networks, and antenna elements in POSM's
+                  signal-generation and modulation hardware.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="Vector Network Analyzer"
+              data-category="test-measurement">Discuss This Need →</a>
+          </div>
+
+          <!-- Spectrum analyzer -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">RF Spectrum Analyzer</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Confirm minimum frequency range and RBW requirements from RF project specifications -->
+                <p>Operation from low MHz through at least 3 GHz. Adequate resolution bandwidth for characterizing
+                  modulation sidebands and phase noise.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Keysight, Rohde &amp; Schwarz, Rigol, Siglent, or comparable instruments.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, refurbished, demo unit, or loaner.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Verifying spectral purity and characterizing RF modulation signals used in laser stabilization and
+                  atomic experiments.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="RF Spectrum Analyzer"
+              data-category="test-measurement">Discuss This Need →</a>
+          </div>
+
+          <!-- Lock-in amplifier -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Lock-In Amplifier</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <!-- TODO: Specify minimum frequency range and sensitivity from spectroscopy/locking project specs -->
+                <p>Dual-phase lock-in amplifier with sufficient bandwidth for laser-frequency locking and spectroscopic
+                  signal recovery.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Stanford Research Systems (SRS), Zurich Instruments, Ametek/Signal Recovery, or comparable.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, refurbished, demo unit, or loaner.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Required for laser-frequency stabilization via spectroscopy-based error signals (e.g., saturated
+                  absorption, PDH locking).</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="Lock-In Amplifier"
+              data-category="test-measurement">Discuss This Need →</a>
+          </div>
+
+          <!-- Optical power meter -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Optical Power Meter</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Minimum requirements</span>
+                <p>Handheld or benchtop optical power meter with detector head covering visible and near-IR wavelengths.
+                </p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Compatible examples</span>
+                <p>Thorlabs, Newport/MKS, Ophir, Coherent, or comparable instruments.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Acceptable condition</span>
+                <p>New, used, or demo unit with functional sensor head.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Measuring and documenting laser power levels across all optical experiments.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action" data-need="Optical Power Meter"
+              data-category="test-measurement">Discuss This Need →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ═══ SECTION 4: SOFTWARE, EXPERTISE, AND FINANCIAL SUPPORT ═══ -->
+    <section class="pn-section pn-section-alt" id="software-expertise-funding" aria-labelledby="sec-soft-heading">
+      <div class="container">
+        <div class="section-label reveal"><span class="label">Software and Expertise</span></div>
+        <h2 class="display-md reveal reveal-delay-1" id="sec-soft-heading" style="margin-bottom:var(--space-lg)">
+          Software and Expertise</h2>
+
+        <div class="pn-needs-grid reveal-stagger">
+
+          <!-- EDA / simulation -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">Engineering and Simulation Software</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Needs</span>
+                <p>CAD software for mechanical design, circuit simulation, RF/electromagnetic simulation, and
+                  scientific computing licenses.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Ways to help</span>
+                <p>Academic licenses, educational program access, donated seats, or sponsored subscriptions.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Better PCB layouts, validated mechanical designs, and simulated RF performance before
+                  committing to fabrication.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="Engineering and Simulation Software" data-category="software">Discuss This Need →</a>
+          </div>
+
+          <!-- RF mentorship -->
+          <div class="pn-need-card" data-status="needed">
+            <div class="pn-need-header">
+              <h3 class="pn-need-title">RF and Mixed-Signal Design Mentorship</h3>
+            </div>
+            <div class="pn-need-fields">
+              <div class="pn-need-field">
+                <span class="pn-field-label">Needs</span>
+                <p>Design review and mentorship from engineers experienced in RF PCB layout, impedance matching,
+                  signal integrity, mixed-signal grounding, and power-supply design.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Ways to help</span>
+                <p>Remote or in-person design-review sessions, schematic and layout feedback, technical talks, or
+                  ongoing advisory relationships.</p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">What this enables</span>
+                <p>Improves first-spin PCB success rates and helps students learn professional design practices.
+                </p>
+              </div>
+              <div class="pn-need-field">
+                <span class="pn-field-label">Status</span>
+                <span class="pn-status pn-status-needed">Needed</span>
+              </div>
+            </div>
+            <a href="sponsors-join.html#partnership-form" class="pn-need-action"
+              data-need="RF and Mixed-Signal Mentorship" data-category="software">Discuss This Need →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="pn-bottom-cta" aria-labelledby="pn-cta-heading">
+      <div class="container">
+        <div class="reveal" style="max-width:580px;margin-inline:auto;text-align:center">
+          <h2 class="display-md" id="pn-cta-heading" style="margin-bottom:var(--space-md)">Ready to discuss a
+            contribution?</h2>
+          <p class="body-lg pn-body" style="margin-bottom:var(--space-lg)">
+            If your organization can provide any of the equipment, services, expertise, or support listed above, we
+            would appreciate the opportunity to discuss how it fits into our active projects.
+          </p>
+          <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+            <a href="sponsors-join.html#partnership-form" class="btn btn-primary">Start a Partnership →</a>
+            <a href="sponsors-join.html" class="btn btn-ghost">View All Opportunities</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo" style="display:inline-flex">
+            <div class="nav-logo-mark" aria-hidden="true"></div>
+            POSM
+          </a>
+          <p>Student-led quantum optics and AMO hardware research · University of Minnesota</p>
+        </div>
+        <div class="footer-col">
+          <h4>Group</h4><a href="team.html">Team</a><a href="research.html">Research</a><a
+            href="capabilities/hardware.html">Hardware</a><a href="capabilities/posmq.html">POSMq</a><a
+            href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>News</h4><a href="news-updates.html">Project Updates</a><a href="news-publications.html">Publications</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sponsors</h4><a href="sponsors-current.html">Current Sponsors</a><a href="sponsors-join.html">Become a
+            Sponsor</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2025–2026 POSM Research Group · University of Minnesota</span></div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Need card actions: pass item name to sponsor form -->
+  <script>
+    (function () {
+      document.querySelectorAll('.pn-need-action[data-need]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var needName = this.getAttribute('data-need');
+          var category = this.getAttribute('data-category');
+          if (needName) {
+            var url = new URL(this.href, window.location.origin);
+            url.searchParams.set('need', needName);
+            if (category) url.searchParams.set('category', category);
+            this.href = url.toString();
+          }
+        });
+      });
+
+      // Smooth scroll for section nav
+      document.querySelectorAll('.pn-nav-link').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var target = document.getElementById(a.getAttribute('href').slice(1));
+          if (target) {
+            e.preventDefault();
+            var navHeight = document.getElementById('navbar') ? document.getElementById('navbar').offsetHeight : 0;
+            var sectionNav = document.querySelector('.pn-section-nav');
+            var sectionNavHeight = sectionNav ? sectionNav.offsetHeight : 0;
+            var offset = navHeight + sectionNavHeight + 16;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Active nav highlight on scroll
+      var sections = document.querySelectorAll('.pn-section[id]');
+      var navLinks = document.querySelectorAll('.pn-nav-link');
+      function highlightNav() {
+        var scrollPos = window.scrollY + 200;
+        sections.forEach(function (sec, i) {
+          if (sec.offsetTop <= scrollPos && (sec.offsetTop + sec.offsetHeight) > scrollPos) {
+            navLinks.forEach(function (l) { l.classList.remove('active'); });
+            var matching = document.querySelector('.pn-nav-link[href="#' + sec.id + '"]');
+            if (matching) matching.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', highlightNav, { passive: true });
+      highlightNav();
+    })();
+  </script>
+</body>
+
+</html>
